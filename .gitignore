@@ -41,3 +41,5 @@ pytorch/runs/fashion_mnist_experiment_1/projector_config.pbtxt
 pytorch/runs/fashion_mnist_experiment_1/00000/default/metadata.tsv
 pytorch/runs/fashion_mnist_experiment_1/00000/default/sprite.png
 pytorch/runs/fashion_mnist_experiment_1/00000/default/tensors.tsv
+pytorch/.ipynb_checkpoints/lab1_1-checkpoint.ipynb
+.gitignore
