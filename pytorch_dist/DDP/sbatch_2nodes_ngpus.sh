@@ -1,1 +1,0 @@
-../scripts/sbatch_2nodes_ngpus.sh
