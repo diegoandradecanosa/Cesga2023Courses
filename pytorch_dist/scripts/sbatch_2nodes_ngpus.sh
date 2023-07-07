@@ -10,7 +10,7 @@
 #SBATCH -t 00:59:00
 #SBATCH -p short --qos=short
 
-module load tensorflow/2.5.0-cuda-system
+#module load tensorflow/2.5.0-cuda-system
 
 
 echo SLURM_NTASKS: $SLURM_NTASKS
