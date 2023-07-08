@@ -1,0 +1,25 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3413292. Previous errors about TMPDIR can be discarded
+MASTER_PORT=13292
+WORLD_SIZE=2
+MASTER_ADDR=a100-17
+rank: 1, world_size: 2
+World size:  2
+rank: 0, world_size: 2
+World size:  2
+Train Epoch: 1 	Loss: 0.211924
+Test set: Average loss: 0.0483, Accuracy: 9848/10000 (98.48%)
+
+Train Epoch: 2 	Loss: 0.072054
+Test set: Average loss: 0.0371, Accuracy: 9883/10000 (98.83%)
+
+CUDA event elapsed time: 7.00759033203125sec
+FullyShardedDataParallel(
+  (_fsdp_wrapped_module): Net(
+    (conv1): Conv2d(1, 32, kernel_size=(3, 3), stride=(1, 1))
+    (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+    (dropout1): Dropout(p=0.25, inplace=False)
+    (dropout2): Dropout(p=0.5, inplace=False)
+    (fc1): Linear(in_features=9216, out_features=128, bias=True)
+    (fc2): Linear(in_features=128, out_features=10, bias=True)
+  )
+)

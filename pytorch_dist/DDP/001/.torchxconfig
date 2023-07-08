@@ -1,0 +1,22 @@
+[local_docker]
+
+[local_cwd]
+
+[slurm]
+time=00:10:00
+
+
+[kubernetes]
+queue = #FIXME:(str) Volcano queue to schedule job in
+
+[kubernetes_mcad]
+
+[aws_batch]
+queue = #FIXME:(str) queue to schedule job in
+
+[gcp_batch]
+
+[ray]
+
+[lsf]
+

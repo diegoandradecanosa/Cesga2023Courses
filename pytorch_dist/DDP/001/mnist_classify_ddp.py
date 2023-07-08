@@ -73,7 +73,7 @@ def test(model, device, test_loader):
 def setup(rank, world_size):
     # initialize the process group
     print("Before")
-    dist.init_process_group("nccl", rank=rank, world_size=world_size)
+    dist.init_process_group(backend="nccl", rank=rank, world_size=world_size)
     print("After")
 
 def main():
