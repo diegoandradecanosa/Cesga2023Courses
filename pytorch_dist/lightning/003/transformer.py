@@ -57,7 +57,7 @@ def main():
 
     # Trainer
     profiler = PyTorchProfiler(filename="perf-logs")
-    trainer = L.Trainer(gradient_clip_val=0.25, max_epochs=1,profiler=profiler)
+    trainer = L.Trainer(gpus=1,gradient_clip_val=0.25, max_epochs=1,profiler=profiler)
     trainer.fit(model, train_dataloader, val_dataloader)
     trainer.test(model, test_dataloader)
 
