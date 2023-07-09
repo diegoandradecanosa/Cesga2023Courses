@@ -1,0 +1,27 @@
+TEST Profiler Report
+Profile stats for: records
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                          ProfilerStep*         3.65%       1.844ms        99.96%      50.452ms      16.817ms             3  
+                                              test_step         4.89%       2.469ms        94.26%      47.573ms      15.858ms             3  
+                        TransformerM.Transformer: model         3.56%       1.799ms        88.59%      44.714ms      14.905ms             3  
+torch.nn.modules.transformer.Transformer: model.tran...         0.29%     145.000us        47.70%      24.074ms       8.025ms             3  
+torch.nn.modules.transformer.TransformerDecoder: mod...         0.35%     175.000us        32.46%      16.383ms       5.461ms             3  
+                                           aten::linear         0.33%     169.000us        27.14%      13.699ms     415.121us            33  
+                                            aten::addmm        15.55%       7.847ms        25.94%      13.091ms     335.667us            39  
+          torch.nn.modules.linear.Linear: model.decoder         0.27%     138.000us        19.54%       9.864ms       3.288ms             3  
+torch.nn.modules.transformer.TransformerDecoderLayer...         1.28%     648.000us        16.17%       8.161ms       2.720ms             3  
+torch.nn.modules.transformer.TransformerDecoderLayer...         1.16%     586.000us        15.53%       7.838ms       2.613ms             3  
+torch.nn.modules.transformer.TransformerEncoder: mod...         0.67%     340.000us        14.95%       7.546ms       2.515ms             3  
+                                            aten::copy_        14.39%       7.264ms        14.39%       7.264ms      56.310us           129  
+                     aten::_native_multi_head_attention         1.08%     543.000us        13.98%       7.056ms     588.000us            12  
+                                      aten::log_softmax         0.03%      14.000us        13.97%       7.052ms       2.351ms             3  
+                                     aten::_log_softmax        13.94%       7.038ms        13.94%       7.038ms       2.346ms             3  
+                   aten::_transformer_encoder_layer_fwd         0.39%     197.000us        12.29%       6.201ms       1.034ms             6  
+torch.nn.modules.transformer.TransformerEncoderLayer...         0.73%     367.000us         7.57%       3.820ms       1.273ms             3  
+torch.nn.modules.activation.MultiheadAttention: mode...         1.04%     526.000us         6.89%       3.476ms       1.159ms             3  
+torch.nn.modules.transformer.TransformerEncoderLayer...         0.75%     381.000us         6.20%       3.129ms       1.043ms             3  
+torch.nn.modules.activation.MultiheadAttention: mode...         1.07%     542.000us         6.18%       3.119ms       1.040ms             3  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 50.472ms

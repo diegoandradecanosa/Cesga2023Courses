@@ -1,0 +1,27 @@
+FIT Profiler Report
+Profile stats for: records
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                          ProfilerStep*         4.34%       2.068ms        99.96%      47.611ms      15.870ms             3  
+                                        validation_step        16.26%       7.746ms        93.29%      44.437ms      14.812ms             3  
+                                           aten::linear         0.36%     173.000us        27.09%      12.905ms     391.061us            33  
+                                            aten::addmm        16.04%       7.638ms        25.99%      12.377ms     317.359us            39  
+                     aten::_native_multi_head_attention         1.20%     570.000us        15.29%       7.285ms     607.083us            12  
+                                      aten::log_softmax         0.03%      13.000us        15.07%       7.179ms       2.393ms             3  
+                                     aten::_log_softmax        15.04%       7.166ms        15.04%       7.166ms       2.389ms             3  
+                                            aten::copy_        14.32%       6.822ms        14.32%       6.822ms      52.884us           129  
+                   aten::_transformer_encoder_layer_fwd         0.40%     192.000us        13.06%       6.219ms       1.036ms             6  
+                                               aten::mm         5.08%       2.422ms         5.08%       2.422ms     100.917us            24  
+                                           aten::matmul         0.39%     184.000us         5.01%       2.385ms      99.375us            24  
+                                            aten::clone         0.31%     147.000us         4.29%       2.041ms      48.595us            42  
+                     aten::scaled_dot_product_attention         0.04%      18.000us         3.70%       1.763ms     293.833us             6  
+                      aten::_transform_bias_rescale_qkv         3.40%       1.618ms         3.69%       1.758ms     146.500us            12  
+               aten::_scaled_dot_product_attention_math         0.16%      77.000us         3.66%       1.745ms     290.833us             6  
+                                       aten::layer_norm         0.17%      83.000us         3.50%       1.669ms      46.361us            36  
+                                aten::native_layer_norm         3.19%       1.518ms         3.33%       1.586ms      44.056us            36  
+                                              aten::bmm         3.10%       1.478ms         3.10%       1.478ms      41.056us            36  
+                                       aten::contiguous         0.06%      30.000us         3.03%       1.444ms      60.167us            24  
+enumerate(DataLoader)#_SingleProcessDataLoaderIter._...         1.31%     626.000us         2.32%       1.106ms     368.667us             3  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 47.631ms
