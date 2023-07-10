@@ -1,0 +1,192 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3431611. Previous errors about TMPDIR can be discarded
+go 2
+a100-33 a100-34
+myuser=ulcesdac
+myuser=ulcesdac
+COUNT_NODE=2
+LD_LIBRARY_PATH = /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/gr/lib64
+PATH = /mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/home/ulc/es/dac/mypython/bin:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin
+which: no mpicc in (/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/home/ulc/es/dac/mypython/bin:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin)
+COUNT_NODE=2
+which mpicc
+LD_LIBRARY_PATH = /mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/gr/lib64
+HOSTNAMES = a100-33 a100-34
+PATH = /mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/home/ulc/es/dac/mypython/bin:/home/ulc/ewhich: no mpicc in (/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/695af097c7bd098fbf017ce3ac85e09bbc5dda06/bin/remote-cli:/home/ulc/es/dac/mypython/bihostname = a100-33
+n:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin)
+s/dac/miniconda3/condabin:/home/ulc/es/dac/bin
+MASTER_ADDR= a100-33
+MASTER_PORT= 12802
+which mpicc
+HOSTNAMES = a100-33 a100-34
+hostname = a100-34
+MASTER_ADDR= a100-33
+MASTER_PORT= 12802
+THEID=1
+THEID=0
+	[91mPLEASE, READ BEFORE USING CONDA:[0m
+	We are implementing a better use of Miniconda3 for work with their environments. This Miniconda3 was installed under the plain system in order to not have conflicts with the gentoo prefix libraries in the cesga/2020 module.
+	For loading it, type [93mmodule load cesga/system miniconda3/22.11.1-1[0m
+miniconda3/4.11.0 loaded
+	[91mPLEASE, READ BEFORE USING CONDA:[0m
+	We are implementing a better use of Miniconda3 for work with their environments. This Miniconda3 was installed under the plain system in order to not have conflicts with the gentoo prefix libraries in the cesga/2020 module.
+	For loading it, type [93mmodule load cesga/system miniconda3/22.11.1-1[0m
+miniconda3/4.11.0 loaded
+/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin/accelerate
+/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin/accelerate
+[05:59:04] WARNING  The following values were not passed to        launch.py:913
+                    `accelerate launch` and had defaults used                   
+                    instead:                                                    
+                            `--dynamo_backend` was set to a value               
+                    of `'no'`                                                   
+                    To avoid this warning pass in values for each               
+                    of the problematic parameters or run                        
+                    `accelerate config`.                                        
+[05:59:04] WARNING  The following values were not passed to        launch.py:913
+                    `accelerate launch` and had defaults used                   
+                    instead:                                                    
+                            `--dynamo_backend` was set to a value               
+                    of `'no'`                                                   
+                    To avoid this warning pass in values for each               
+                    of the problematic parameters or run                        
+                    `accelerate config`.                                        
+Downloading (…)okenizer_config.json:   0%|          | 0.00/29.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 29.0/29.0 [00:00<00:00, 12.9kB/s]
+Downloading (…)okenizer_config.json:   0%|          | 0.00/29.0 [00:00<?, ?B/s]Downloading (…)okenizer_config.json: 100%|██████████| 29.0/29.0 [00:00<00:00, 12.5kB/s]
+Downloading (…)lve/main/config.json:   0%|          | 0.00/570 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 570/570 [00:00<00:00, 313kB/s]
+Downloading (…)lve/main/config.json:   0%|          | 0.00/570 [00:00<?, ?B/s]Downloading (…)lve/main/config.json: 100%|██████████| 570/570 [00:00<00:00, 329kB/s]
+Downloading (…)solve/main/vocab.txt:   0%|          | 0.00/213k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 213k/213k [00:00<00:00, 1.03MB/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 213k/213k [00:00<00:00, 1.03MB/s]
+Downloading (…)solve/main/vocab.txt:   0%|          | 0.00/213k [00:00<?, ?B/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 213k/213k [00:00<00:00, 1.02MB/s]Downloading (…)solve/main/vocab.txt: 100%|██████████| 213k/213k [00:00<00:00, 1.02MB/s]
+Downloading (…)/main/tokenizer.json:   0%|          | 0.00/436k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 436k/436k [00:00<00:00, 1.45MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 436k/436k [00:00<00:00, 1.45MB/s]
+Downloading (…)/main/tokenizer.json:   0%|          | 0.00/436k [00:00<?, ?B/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 436k/436k [00:00<00:00, 1.40MB/s]Downloading (…)/main/tokenizer.json: 100%|██████████| 436k/436k [00:00<00:00, 1.40MB/s]
+Downloading builder script:   0%|          | 0.00/28.8k [00:00<?, ?B/s]Downloading builder script: 100%|██████████| 28.8k/28.8k [00:00<00:00, 18.8MB/s]
+Downloading metadata:   0%|          | 0.00/28.7k [00:00<?, ?B/s]Downloading metadata: 100%|██████████| 28.7k/28.7k [00:00<00:00, 17.2MB/s]
+Downloading readme:   0%|          | 0.00/27.9k [00:00<?, ?B/s]Downloading readme: 100%|██████████| 27.9k/27.9k [00:00<00:00, 15.5MB/s]
+Downloading and preparing dataset glue/mrpc to /home/ulc/es/dac/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad...
+Downloading data files:   0%|          | 0/3 [00:00<?, ?it/s]
+Downloading data: 0.00B [00:00, ?B/s][ADownloading data: 6.22kB [00:00, 7.15MB/s]
+Downloading data files:  33%|███▎      | 1/3 [00:00<00:00,  2.31it/s]
+Downloading data: 0.00B [00:00, ?B/s][ADownloading data: 1.05MB [00:00, 25.1MB/s]
+Downloading data files:  67%|██████▋   | 2/3 [00:01<00:00,  1.50it/s]
+Downloading data: 0.00B [00:00, ?B/s][ADownloading data: 441kB [00:00, 18.5MB/s]
+Downloading data files: 100%|██████████| 3/3 [00:01<00:00,  2.11it/s]Downloading data files: 100%|██████████| 3/3 [00:01<00:00,  1.99it/s]
+Dataset glue downloaded and prepared to /home/ulc/es/dac/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad. Subsequent calls will reuse this data.
+Found cached dataset glue (/home/ulc/es/dac/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad)
+  0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 63.04it/s]
+Generating train split:   0%|          | 0/3668 [00:00<?, ? examples/s]Generating train split:  27%|██▋       | 1000/3668 [00:00<00:00, 5871.08 examples/s]Generating train split:  91%|█████████ | 3338/3668 [00:00<00:00, 13853.38 examples/s]                                                                                     Generating validation split:   0%|          | 0/408 [00:00<?, ? examples/s]                                                                           Generating test split:   0%|          | 0/1725 [00:00<?, ? examples/s]                                                                        0%|          | 0/3 [00:00<?, ?it/s]100%|██████████| 3/3 [00:00<00:00, 58.21it/s]
+Downloading builder script:   0%|          | 0.00/5.75k [00:00<?, ?B/s]Downloading builder script: 100%|██████████| 5.75k/5.75k [00:00<00:00, 10.8MB/s]
+c209-1:261396:261396 [0] NCCL INFO Bootstrap : Using ib0:172.30.209.1<0>
+c209-1:261396:261396 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+c209-1:261396:261396 [0] NCCL INFO cudaDriverVersion 11050
+NCCL version 2.14.3+cuda11.7
+c209-2:2961492:2961492 [0] NCCL INFO cudaDriverVersion 11050
+c209-2:2961492:2961492 [0] NCCL INFO Bootstrap : Using ib0:172.30.209.2<0>
+c209-2:2961492:2961492 [0] NCCL INFO NET/Plugin : No plugin found (libnccl-net.so), using internal implementation
+c209-1:261396:261507 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.209.1<0>
+c209-1:261396:261507 [0] NCCL INFO Using network IB
+c209-2:2961492:2961566 [0] NCCL INFO NET/IB : Using [0]mlx5_2:1/IB [1]mlx5_bond_0:1/RoCE [RO]; OOB ib0:172.30.209.2<0>
+c209-2:2961492:2961566 [0] NCCL INFO Using network IB
+c209-1:261396:261507 [0] NCCL INFO Setting affinity for GPU 0 to ffff
+c209-2:2961492:2961566 [0] NCCL INFO Setting affinity for GPU 0 to ffff
+c209-2:2961492:2961566 [0] NCCL INFO Trees [0] -1/-1/-1->1->0 [1] 0/-1/-1->1->-1
+c209-1:261396:261507 [0] NCCL INFO Channel 00/02 :    0   1
+c209-1:261396:261507 [0] NCCL INFO Channel 01/02 :    0   1
+c209-1:261396:261507 [0] NCCL INFO Trees [0] 1/-1/-1->0->-1 [1] -1/-1/-1->0->1
+c209-1:261396:261507 [0] NCCL INFO Channel 00/0 : 1[17000] -> 0[17000] [receive] via NET/IB/0
+c209-2:2961492:2961566 [0] NCCL INFO Channel 00/0 : 0[17000] -> 1[17000] [receive] via NET/IB/0
+c209-2:2961492:2961566 [0] NCCL INFO Channel 01/0 : 0[17000] -> 1[17000] [receive] via NET/IB/0
+c209-1:261396:261507 [0] NCCL INFO Channel 01/0 : 1[17000] -> 0[17000] [receive] via NET/IB/0
+c209-2:2961492:2961566 [0] NCCL INFO Channel 00/0 : 1[17000] -> 0[17000] [send] via NET/IB/0
+c209-1:261396:261507 [0] NCCL INFO Channel 00/0 : 0[17000] -> 1[17000] [send] via NET/IB/0
+c209-2:2961492:2961566 [0] NCCL INFO Channel 01/0 : 1[17000] -> 0[17000] [send] via NET/IB/0
+c209-1:261396:261507 [0] NCCL INFO Channel 01/0 : 0[17000] -> 1[17000] [send] via NET/IB/0
+c209-1:261396:261507 [0] NCCL INFO Connected all rings
+c209-1:261396:261507 [0] NCCL INFO Connected all trees
+c209-1:261396:261507 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+c209-1:261396:261507 [0] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+c209-2:2961492:2961566 [0] NCCL INFO Connected all rings
+c209-2:2961492:2961566 [0] NCCL INFO Connected all trees
+c209-2:2961492:2961566 [0] NCCL INFO threadThresholds 8/8/64 | 16/8/64 | 512 | 512
+c209-2:2961492:2961566 [0] NCCL INFO 2 coll channels, 2 p2p channels, 2 p2p channels per peer
+c209-1:261396:261507 [0] NCCL INFO comm 0x562add1bfb20 rank 0 nranks 2 cudaDev 0 busId 17000 - Init COMPLETE
+c209-2:2961492:2961566 [0] NCCL INFO comm 0x55ec421dfe10 rank 1 nranks 2 cudaDev 0 busId 17000 - Init COMPLETE
+Loading cached processed dataset at /home/ulc/es/dac/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-71b91981784925bd.arrow
+Map:   0%|          | 0/408 [00:00<?, ? examples/s]                                                   Loading cached processed dataset at /home/ulc/es/dac/.cache/huggingface/datasets/glue/mrpc/1.0.0/dacbe3125aa31d7f70367a07a8a9e72a5a0bfeb5fc42e75c9db75b96da6053ad/cache-c3f3498d43805024.arrow
+Map:   0%|          | 0/3668 [00:00<?, ? examples/s]Map:  27%|██▋       | 1000/3668 [00:00<00:00, 5850.38 examples/s]                                                                 Map:   0%|          | 0/408 [00:00<?, ? examples/s]                                                   Map:   0%|          | 0/1725 [00:00<?, ? examples/s]                                                    Downloading model.safetensors:   0%|          | 0.00/436M [00:00<?, ?B/s]Downloading model.safetensors:   2%|▏         | 10.5M/436M [00:00<00:04, 97.6MB/s]Downloading model.safetensors:   7%|▋         | 31.5M/436M [00:00<00:03, 122MB/s] Downloading model.safetensors:  12%|█▏        | 52.4M/436M [00:00<00:02, 139MB/s]Downloading model.safetensors:  17%|█▋        | 73.4M/436M [00:00<00:02, 123MB/s]Downloading model.safetensors:  24%|██▍       | 105M/436M [00:00<00:02, 159MB/s] Downloading model.safetensors:  31%|███▏      | 136M/436M [00:00<00:01, 185MB/s]Downloading model.safetensors:  39%|███▊      | 168M/436M [00:01<00:01, 194MB/s]Downloading model.safetensors:  43%|████▎     | 189M/436M [00:01<00:02, 121MB/s]Downloading model.safetensors:  48%|████▊     | 210M/436M [00:01<00:01, 135MB/s]Downloading model.safetensors:  53%|█████▎    | 231M/436M [00:01<00:01, 148MB/s]Downloading model.safetensors:  58%|█████▊    | 252M/436M [00:01<00:01, 160MB/s]Downloading model.safetensors:  63%|██████▎   | 273M/436M [00:01<00:00, 171MB/s]Downloading model.safetensors:  67%|██████▋   | 294M/436M [00:01<00:00, 180MB/s]Downloading model.safetensors:  72%|███████▏  | 315M/436M [00:01<00:00, 187MB/s]Downloading model.safetensors:  77%|███████▋  | 336M/436M [00:02<00:00, 180MB/s]Downloading model.safetensors:  84%|████████▍ | 367M/436M [00:02<00:00, 190MB/s]Downloading model.safetensors:  91%|█████████▏| 398M/436M [00:02<00:00, 168MB/s]Downloading model.safetensors:  96%|█████████▋| 419M/436M [00:02<00:00, 108MB/s]Downloading model.safetensors: 100%|██████████| 436M/436M [00:03<00:00, 113MB/s]Downloading model.safetensors: 100%|██████████| 436M/436M [00:03<00:00, 145MB/s]
+Downloading model.safetensors:   0%|          | 0.00/436M [00:00<?, ?B/s]Downloading model.safetensors:   2%|▏         | 10.5M/436M [00:00<00:04, 102MB/s]Downloading model.safetensors:   7%|▋         | 31.5M/436M [00:00<00:03, 133MB/s]Downloading model.safetensors:  12%|█▏        | 52.4M/436M [00:00<00:02, 145MB/s]Downloading model.safetensors:  19%|█▉        | 83.9M/436M [00:00<00:01, 180MB/s]Downloading model.safetensors:  26%|██▋       | 115M/436M [00:00<00:01, 197MB/s] Downloading model.safetensors:  34%|███▎      | 147M/436M [00:00<00:01, 209MB/s]Downloading model.safetensors:  41%|████      | 178M/436M [00:00<00:01, 216MB/s]Downloading model.safetensors:  48%|████▊     | 210M/436M [00:01<00:01, 213MB/s]Downloading model.safetensors:  55%|█████▌    | 241M/436M [00:01<00:00, 215MB/s]Downloading model.safetensors:  63%|██████▎   | 273M/436M [00:01<00:00, 220MB/s]Downloading model.safetensors:  70%|██████▉   | 30Some weights of the model checkpoint at bert-base-cased were not used when initializing BertForSequenceClassification: ['cls.predictions.transform.dense.weight', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.LayerNorm.bias', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.weight']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-cased and are newly initialized: ['classifier.bias', 'classifier.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+4M/436M [00:01<00:00, 226MB/s]Downloading model.safetensors:  77%|███████▋  | 336M/436M [00:01<00:00, 228MB/s]Downloading model.safetensors:  84%|████████▍ | 367M/436M [00:01<00:00, 228MB/s]Downloading model.safetensors:  91%|█████████▏| 398M/436M [00:01<00:00, 228MB/s]Downloading model.safetensors:  99%|█████████▊| 430M/436M [00:02<00:00, 228MB/s]Downloading model.safetensors: 100%|██████████| 436M/436M [00:02<00:00, 211MB/s]
+Some weights of the model checkpoint at bert-base-cased were not used when initializing BertForSequenceClassification: ['cls.seq_relationship.weight', 'cls.predictions.transform.dense.weight', 'cls.predictions.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.dense.bias', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertForSequenceClassification from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForSequenceClassification from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Some weights of BertForSequenceClassification were not initialized from the model checkpoint at bert-base-cased and are newly initialized: ['classifier.weight', 'classifier.bias']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+epoch 0: {'accuracy': 0.7524509803921569, 'f1': 0.8394276629570748}
+epoch 0: {'accuracy': 0.7524509803921569, 'f1': 0.8394276629570748}
+epoch 1: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 1: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 2: {'accuracy': 0.8431372549019608, 'f1': 0.8940397350993377}
+epoch 2: {'accuracy': 0.8431372549019608, 'f1': 0.8940397350993377}
+epoch 3: {'accuracy': 0.8406862745098039, 'f1': 0.8892674616695059}
+epoch 3: {'accuracy': 0.8406862745098039, 'f1': 0.8892674616695059}
+epoch 4: {'accuracy': 0.8480392156862745, 'f1': 0.8956228956228957}
+epoch 4: {'accuracy': 0.8480392156862745, 'f1': 0.8956228956228957}
+epoch 5: {'accuracy': 0.8504901960784313, 'f1': 0.899505766062603}
+epoch 5: {'accuracy': 0.8504901960784313, 'f1': 0.899505766062603}
+epoch 6: {'accuracy': 0.8112745098039216, 'f1': 0.8549905838041432}
+epoch 6: {'accuracy': 0.8112745098039216, 'f1': 0.8549905838041432}
+epoch 7: {'accuracy': 0.8553921568627451, 'f1': 0.8966725043782837}
+epoch 7: {'accuracy': 0.8553921568627451, 'f1': 0.8966725043782837}
+epoch 8: {'accuracy': 0.8553921568627451, 'f1': 0.9008403361344538}
+epoch 8: {'accuracy': 0.8553921568627451, 'f1': 0.9008403361344538}
+epoch 9: {'accuracy': 0.821078431372549, 'f1': 0.874354561101549}
+epoch 9: {'accuracy': 0.821078431372549, 'f1': 0.874354561101549}
+epoch 10: {'accuracy': 0.8504901960784313, 'f1': 0.8985024958402663}
+epoch 10: {'accuracy': 0.8504901960784313, 'f1': 0.8985024958402663}
+epoch 11: {'accuracy': 0.8480392156862745, 'f1': 0.8927335640138409}
+epoch 11: {'accuracy': 0.8480392156862745, 'f1': 0.8927335640138409}
+epoch 12: {'accuracy': 0.8431372549019608, 'f1': 0.8904109589041096}
+epoch 12: {'accuracy': 0.8431372549019608, 'f1': 0.8904109589041096}
+epoch 13: {'accuracy': 0.8480392156862745, 'f1': 0.8952702702702703}
+epoch 13: {'accuracy': 0.8480392156862745, 'f1': 0.8952702702702703}
+epoch 14: {'accuracy': 0.8406862745098039, 'f1': 0.8841354723707666}
+epoch 14: {'accuracy': 0.8406862745098039, 'f1': 0.8841354723707666}
+epoch 15: {'accuracy': 0.8455882352941176, 'f1': 0.8880994671403197}
+epoch 15: {'accuracy': 0.8455882352941176, 'f1': 0.8880994671403197}
+epoch 16: {'accuracy': 0.8480392156862745, 'f1': 0.8931034482758621}
+epoch 16: {'accuracy': 0.8480392156862745, 'f1': 0.8931034482758621}
+epoch 17: {'accuracy': 0.8480392156862745, 'f1': 0.89419795221843}
+epoch 17: {'accuracy': 0.8480392156862745, 'f1': 0.89419795221843}
+epoch 18: {'accuracy': 0.8504901960784313, 'f1': 0.8985024958402663}
+epoch 18: {'accuracy': 0.8504901960784313, 'f1': 0.8985024958402663}
+epoch 19: {'accuracy': 0.8406862745098039, 'f1': 0.8877374784110534}
+epoch 19: {'accuracy': 0.8406862745098039, 'f1': 0.8877374784110534}
+epoch 20: {'accuracy': 0.8504901960784313, 'f1': 0.8939130434782607}
+epoch 20: {'accuracy': 0.8504901960784313, 'f1': 0.8939130434782607}
+epoch 21: {'accuracy': 0.8431372549019608, 'f1': 0.8904109589041096}
+epoch 21: {'accuracy': 0.8431372549019608, 'f1': 0.8904109589041096}
+epoch 22: {'accuracy': 0.8529411764705882, 'f1': 0.8986486486486487}
+epoch 22: {'accuracy': 0.8529411764705882, 'f1': 0.8986486486486487}
+epoch 23: {'accuracy': 0.8529411764705882, 'f1': 0.8983050847457628}
+epoch 23: {'accuracy': 0.8529411764705882, 'f1': 0.8983050847457628}
+epoch 24: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 24: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 25: {'accuracy': 0.8431372549019608, 'f1': 0.889655172413793}
+epoch 25: {'accuracy': 0.8431372549019608, 'f1': 0.889655172413793}
+epoch 26: {'accuracy': 0.8480392156862745, 'f1': 0.8949152542372881}
+epoch 26: {'accuracy': 0.8480392156862745, 'f1': 0.8949152542372881}
+epoch 27: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 27: {'accuracy': 0.8504901960784313, 'f1': 0.8967851099830796}
+epoch 28: {'accuracy': 0.8431372549019608, 'f1': 0.889655172413793}
+epoch 28: {'accuracy': 0.8431372549019608, 'f1': 0.889655172413793}
+epoch 29: {'accuracy': 0.8480392156862745, 'f1': 0.89419795221843}
+epoch 29: {'accuracy': 0.8480392156862745, 'f1': 0.89419795221843}
+c209-2:2961492:2961569 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c209-1:261396:261510 [0] NCCL INFO [Service thread] Connection closed by localRank 0
+c209-1:261396:261396 [0] NCCL INFO comm 0x562add1bfb20 rank 0 nranks 2 cudaDev 0 busId 17000 - Abort COMPLETE
+c209-2:2961492:2961492 [0] NCCL INFO comm 0x55ec421dfe10 rank 1 nranks 2 cudaDev 0 busId 17000 - Abort COMPLETE
+DONE¡
+DONE¡
