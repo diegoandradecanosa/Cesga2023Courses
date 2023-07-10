@@ -1,0 +1,679 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3438911. Previous errors about TMPDIR can be discarded
+
+EnvironmentNameNotFound: Could not find conda environment: tune-sample.py
+You can list all discoverable environments with `conda info --envs`.
+
+
+IP Head: 10.120.209.2:6379
+Usage stats disabled for future clusters. Restart any current running clusters for this to take effect.
+Starting HEAD at a100-34
+
+ArgumentError: activate does not accept more than one argument:
+['a100-34', '10.120.209.2', '6379']
+
+
+2023-07-10 15:40:05,472	INFO usage_lib.py:382 -- Usage stats collection is disabled.
+2023-07-10 15:40:05,472	INFO scripts.py:712 -- [37mLocal node IP[39m: [1m10.120.209.2[22m
+2023-07-10 15:40:07,717	SUCC scripts.py:749 -- [32m--------------------[39m
+2023-07-10 15:40:07,717	SUCC scripts.py:750 -- [32mRay runtime started.[39m
+2023-07-10 15:40:07,717	SUCC scripts.py:751 -- [32m--------------------[39m
+2023-07-10 15:40:07,717	INFO scripts.py:753 -- [36mNext steps[39m
+2023-07-10 15:40:07,718	INFO scripts.py:756 -- To add another node to this Ray cluster, run
+2023-07-10 15:40:07,718	INFO scripts.py:759 -- [1m  ray start --address='10.120.209.2:6379'[22m
+2023-07-10 15:40:07,718	INFO scripts.py:768 -- To connect to this Ray cluster:
+2023-07-10 15:40:07,718	INFO scripts.py:770 -- [35mimport[39m[26m ray
+2023-07-10 15:40:07,718	INFO scripts.py:771 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'10.120.209.2'[39m[26m)
+2023-07-10 15:40:07,718	INFO scripts.py:783 -- To submit a Ray job using the Ray Jobs CLI:
+2023-07-10 15:40:07,718	INFO scripts.py:784 -- [1m  RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2023-07-10 15:40:07,718	INFO scripts.py:793 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2023-07-10 15:40:07,718	INFO scripts.py:797 -- for more information on submitting Ray jobs to the Ray cluster.
+2023-07-10 15:40:07,718	INFO scripts.py:802 -- To terminate the Ray runtime, run
+2023-07-10 15:40:07,718	INFO scripts.py:803 -- [1m  ray stop[22m
+2023-07-10 15:40:07,718	INFO scripts.py:806 -- To view the status of the cluster, use
+2023-07-10 15:40:07,718	INFO scripts.py:807 --   [1mray status[22m[26m
+2023-07-10 15:40:07,718	INFO scripts.py:811 -- To monitor and debug Ray, view the dashboard at 
+2023-07-10 15:40:07,718	INFO scripts.py:812 --   [1m127.0.0.1:8265[22m[26m
+2023-07-10 15:40:07,718	INFO scripts.py:819 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2023-07-10 15:40:07,718	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-10 15:40:07,719	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-10 15:40:07,719	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+Starting WORKER 1 at a100-36
+
+ArgumentError: activate does not accept more than one argument:
+['a100-36', '10.120.209.2:6379']
+
+
+[2023-07-10 15:40:14,789 I 1565104 1565104] global_state_accessor.cc:356: This node has an IP address of 10.120.209.4, but we cannot find a local Raylet with the same address. This can happen when you connect to the Ray cluster with a different IP address or when connecting to a container.
+2023-07-10 15:40:14,769	INFO scripts.py:894 -- [37mLocal node IP[39m: [1m10.120.209.4[22m
+2023-07-10 15:40:14,790	SUCC scripts.py:906 -- [32m--------------------[39m
+2023-07-10 15:40:14,790	SUCC scripts.py:907 -- [32mRay runtime started.[39m
+2023-07-10 15:40:14,790	SUCC scripts.py:908 -- [32m--------------------[39m
+2023-07-10 15:40:14,790	INFO scripts.py:910 -- To terminate the Ray runtime, run
+2023-07-10 15:40:14,790	INFO scripts.py:911 -- [1m  ray stop[22m
+2023-07-10 15:40:14,790	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-10 15:40:14,790	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-10 15:40:14,790	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+
+EnvironmentNameNotFound: Could not find conda environment: tune-sample.py
+You can list all discoverable environments with `conda info --envs`.
+
+
+/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin/python
+2023-07-10 15:40:22,346	INFO worker.py:1452 -- Connecting to existing Ray cluster at address: 10.120.209.2:6379...
+2023-07-10 15:40:22,351	INFO worker.py:1627 -- Connected to Ray cluster. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+2023-07-10 15:40:23,304	INFO tune.py:226 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `Tuner(...)`.
+2023-07-10 15:40:23,316	INFO tensorboardx.py:178 -- pip install "ray[tune]" to see TensorBoard files.
+2023-07-10 15:40:23,316	WARNING callback.py:144 -- The TensorboardX logger cannot be instantiated because either TensorboardX or one of it's dependencies is not installed. Please make sure you have the latest version of TensorboardX installed: `pip install -U tensorboardx`
+== Status ==
+Current time: 2023-07-10 15:40:23 (running for 00:00:00.14)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 0/64 CPUs, 0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 PENDING)
++-------------------------+----------+-------+--------------+------------+
+| Trial name              | status   | loc   |   batch_size |         lr |
+|-------------------------+----------+-------+--------------+------------|
+| train_cifar_51e43_00000 | PENDING  |       |            4 | 0.004257   |
+| train_cifar_51e43_00001 | PENDING  |       |            8 | 0.00023724 |
++-------------------------+----------+-------+--------------+------------+
+
+
+== Status ==
+Current time: 2023-07-10 15:40:28 (running for 00:00:05.14)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00000_0_batch_size=4,lr=0.0043_2023-07-10_15-40-23/data/cifar-10-python.tar.gz
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 0/170498071 [00:00<?, ?it/s]
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 32768/170498071 [00:00<11:31, 246541.42it/s]
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 65536/170498071 [00:00<11:30, 246677.82it/s]
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 98304/170498071 [00:00<11:28, 247348.14it/s]
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 229376/170498071 [00:00<05:16, 538239.96it/s]
+[2m[36m(train_cifar pid=3049137)[0m   0%|          | 458752/170498071 [00:00<02:56, 965187.25it/s]
+[2m[36m(train_cifar pid=3049137)[0m   1%|          | 884736/170498071 [00:00<01:38, 1727524.28it/s]
+[2m[36m(train_cifar pid=3049137)[0m   1%|          | 1802240/170498071 [00:00<00:49, 3413969.62it/s]
+[2m[36m(train_cifar pid=3049137)[0m   2%|▏         | 3604480/170498071 [00:01<00:25, 6627414.88it/s]
+[2m[36m(train_cifar pid=3049137)[0m   4%|▍         | 6750208/170498071 [00:01<00:13, 11892502.72it/s]
+[2m[36m(train_cifar pid=3049137)[0m   6%|▌         | 9863168/170498071 [00:01<00:10, 15389123.19it/s]
+[2m[36m(train_cifar pid=3049137)[0m   8%|▊         | 12976128/170498071 [00:01<00:08, 17829727.26it/s]
+[2m[36m(train_cifar pid=3049137)[0m   9%|▉         | 15630336/170498071 [00:01<00:07, 19861365.59it/s]
+[2m[36m(train_cifar pid=3049137)[0m  10%|█         | 17661952/170498071 [00:01<00:07, 19679997.57it/s]
+[2m[36m(train_cifar pid=3049137)[0m  12%|█▏        | 19660800/170498071 [00:01<00:08, 18844212.48it/s]
+[2m[36m(train_cifar pid=3049137)[0m  13%|█▎        | 22118400/170498071 [00:01<00:07, 19060322.64it/s]
+[2m[36m(train_cifar pid=3049137)[0m  15%|█▍        | 24772608/170498071 [00:02<00:06, 21023729.42it/s]
+[2m[36m(train_cifar pid=3049137)[0m  16%|█▌        | 26935296/170498071 [00:02<00:06, 21087370.76it/s]
+[2m[36m(train_cifar pid=3049137)[0m  17%|█▋        | 29097984/170498071 [00:02<00:07, 20113973.80it/s]
+[2m[36m(train_cifar pid=3049137)[0m  18%|█▊        | 31162368/170498071 [00:02<00:06, 20178550.72it/s]
+[2m[36m(train_cifar pid=3049137)[0m  20%|█▉        | 33882112/170498071 [00:02<00:06, 20208775.53it/s]
+[2m[36m(train_cifar pid=3049137)[0m  22%|██▏       | 36864000/170498071 [00:02<00:06, 20558217.52it/s]
+[2m[36m(train_cifar pid=3049137)[0m  23%|██▎       | 39911424/170498071 [00:02<00:06, 20826489.04it/s]
+[2m[36m(train_cifar pid=3049137)[0m  25%|██▌       | 42860544/170498071 [00:02<00:06, 20986503.29it/s]
+[2m[36m(train_cifar pid=3049137)[0m  27%|██▋       | 45776896/170498071 [00:03<00:05, 20968547.96it/s]
+[2m[36m(train_cifar pid=3049137)[0m  29%|██▊       | 48758784/170498071 [00:03<00:05, 21067112.43it/s]
+[2m[36m(train_cifar pid=3049137)[0m  30%|███       | 51544064/170498071 [00:03<00:05, 22663307.00it/s]
+[2m[36m(train_cifar pid=3049137)[0m  32%|███▏      | 53870592/170498071 [00:03<00:05, 22020168.74it/s]
+[2m[36m(train_cifar pid=3049137)[0m  33%|███▎      | 56098816/170498071 [00:03<00:05, 20639800.00it/s]
+[2m[36m(train_cifar pid=3049137)[0m  34%|███▍      | 58654720/170498071 [00:03<00:05, 21843957.31it/s]
+[2m[36m(train_cifar pid=3049137)[0m  36%|███▌      | 60882944/170498071 [00:03<00:05, 20533153.87it/s]
+[2m[36m(train_cifar pid=3049137)[0m  37%|███▋      | 63504384/170498071 [00:03<00:05, 20297132.34it/s]
+[2m[36m(train_cifar pid=3049137)[0m  39%|███▊      | 65896448/170498071 [00:03<00:04, 21213095.23it/s]
+== Status ==
+Current time: 2023-07-10 15:40:33 (running for 00:00:10.16)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m  40%|███▉      | 68059136/170498071 [00:04<00:04, 20664199.65it/s]
+[2m[36m(train_cifar pid=3049137)[0m  41%|████      | 70156288/170498071 [00:04<00:04, 20271979.87it/s]
+[2m[36m(train_cifar pid=3049137)[0m  42%|████▏     | 72351744/170498071 [00:04<00:04, 20606587.51it/s]
+[2m[36m(train_cifar pid=3049137)[0m  44%|████▎     | 74448896/170498071 [00:04<00:04, 20348296.34it/s]
+[2m[36m(train_cifar pid=3049137)[0m  45%|████▍     | 76677120/170498071 [00:04<00:04, 20322949.38it/s]
+[2m[36m(train_cifar pid=3049137)[0m  47%|████▋     | 79527936/170498071 [00:04<00:04, 22608976.08it/s]
+[2m[36m(train_cifar pid=3049137)[0m  48%|████▊     | 81821696/170498071 [00:04<00:04, 21400485.61it/s]
+[2m[36m(train_cifar pid=3049137)[0m  49%|████▉     | 84049920/170498071 [00:04<00:04, 20219322.24it/s]
+[2m[36m(train_cifar pid=3049137)[0m  51%|█████     | 86310912/170498071 [00:04<00:04, 20804162.84it/s]
+[2m[36m(train_cifar pid=3049137)[0m  52%|█████▏    | 88440832/170498071 [00:05<00:04, 19903715.42it/s]
+[2m[36m(train_cifar pid=3049137)[0m  53%|█████▎    | 90898432/170498071 [00:05<00:03, 21133676.71it/s]
+[2m[36m(train_cifar pid=3049137)[0m  55%|█████▍    | 93061120/170498071 [00:05<00:03, 19766674.94it/s]
+[2m[36m(train_cifar pid=3049137)[0m  56%|█████▌    | 95485952/170498071 [00:05<00:03, 20874522.89it/s]
+[2m[36m(train_cifar pid=3049137)[0m  57%|█████▋    | 97615872/170498071 [00:05<00:03, 19887820.31it/s]
+[2m[36m(train_cifar pid=3049137)[0m  59%|█████▊    | 99909632/170498071 [00:05<00:03, 20660851.67it/s]
+[2m[36m(train_cifar pid=3049137)[0m  60%|█████▉    | 102006784/170498071 [00:05<00:03, 19870593.40it/s]
+[2m[36m(train_cifar pid=3049137)[0m  61%|██████    | 104267776/170498071 [00:05<00:03, 19941285.48it/s]
+[2m[36m(train_cifar pid=3049137)[0m  62%|██████▏   | 106397696/170498071 [00:05<00:03, 20240048.93it/s]
+[2m[36m(train_cifar pid=3049137)[0m  64%|██████▎   | 108593152/170498071 [00:06<00:03, 20371517.58it/s]
+[2m[36m(train_cifar pid=3049137)[0m  65%|██████▍   | 110657536/170498071 [00:06<00:02, 20355872.06it/s]
+[2m[36m(train_cifar pid=3049137)[0m  66%|██████▌   | 112951296/170498071 [00:06<00:02, 20357214.45it/s]
+[2m[36m(train_cifar pid=3049137)[0m  67%|██████▋   | 115048448/170498071 [00:06<00:02, 20519846.37it/s]
+[2m[36m(train_cifar pid=3049137)[0m  69%|██████▉   | 117276672/170498071 [00:06<00:02, 20470929.94it/s]
+[2m[36m(train_cifar pid=3049137)[0m  70%|███████   | 119472128/170498071 [00:06<00:02, 20743517.71it/s]
+[2m[36m(train_cifar pid=3049137)[0m  71%|███████▏  | 121569280/170498071 [00:06<00:02, 20511644.26it/s]
+[2m[36m(train_cifar pid=3049137)[0m  73%|███████▎  | 123699200/170498071 [00:06<00:02, 20705825.89it/s]
+[2m[36m(train_cifar pid=3049137)[0m  74%|███████▍  | 125861888/170498071 [00:06<00:02, 20640029.65it/s]
+[2m[36m(train_cifar pid=3049137)[0m  75%|███████▌  | 127959040/170498071 [00:07<00:02, 20616491.70it/s]
+[2m[36m(train_cifar pid=3049137)[0m  76%|███████▋  | 130154496/170498071 [00:07<00:01, 20512749.66it/s]
+[2m[36m(train_cifar pid=3049137)[0m  78%|███████▊  | 132218880/170498071 [00:07<00:01, 20407524.59it/s]
+[2m[36m(train_cifar pid=3049137)[0m  79%|███████▉  | 134283264/170498071 [00:07<00:01, 20111895.81it/s]
+[2m[36m(train_cifar pid=3049137)[0m  80%|███████▉  | 136380416/170498071 [00:07<00:01, 20328925.78it/s]
+[2m[36m(train_cifar pid=3049137)[0m  81%|████████  | 138444800/170498071 [00:07<00:01, 20285110.46it/s]
+[2m[36m(train_cifar pid=3049137)[0m  82%|████████▏ | 140607488/170498071 [00:07<00:01, 20497570.97it/s]
+[2m[36m(train_cifar pid=3049137)[0m  84%|████████▎ | 142671872/170498071 [00:07<00:02, 13226351.10it/s]
+[2m[36m(train_cifar pid=3049137)[0m  85%|████████▌ | 145555456/170498071 [00:08<00:01, 15399054.60it/s]
+[2m[36m(train_cifar pid=3049137)[0m  86%|████████▋ | 147357696/170498071 [00:08<00:01, 14811765.46it/s]
+[2m[36m(train_cifar pid=3049137)[0m  88%|████████▊ | 149553152/170498071 [00:08<00:01, 16390042.95it/s]
+[2m[36m(train_cifar pid=3049137)[0m  89%|████████▉ | 151388160/170498071 [00:08<00:01, 16821457.94it/s]
+[2m[36m(train_cifar pid=3049137)[0m  90%|█████████ | 153550848/170498071 [00:08<00:00, 18057850.01it/s]
+[2m[36m(train_cifar pid=3049137)[0m  91%|█████████ | 155484160/170498071 [00:08<00:00, 18272351.91it/s]
+[2m[36m(train_cifar pid=3049137)[0m  92%|█████████▏| 157614080/170498071 [00:08<00:00, 19035593.42it/s]
+[2m[36m(train_cifar pid=3049137)[0m  94%|█████████▎| 159711232/170498071 [00:08<00:00, 19565779.98it/s]
+[2m[36m(train_cifar pid=3049137)[0m  95%|█████████▍| 161742848/170498071 [00:08<00:00, 19280017.38it/s]
+== Status ==
+Current time: 2023-07-10 15:40:38 (running for 00:00:15.16)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m  96%|█████████▌| 163708928/170498071 [00:09<00:00, 19248504.96it/s]
+[2m[36m(train_cifar pid=3049137)[0m  97%|█████████▋| 165838848/170498071 [00:09<00:00, 19776528.71it/s]
+[2m[36m(train_cifar pid=3049137)[0m  98%|█████████▊| 167837696/170498071 [00:09<00:00, 19692786.01it/s]
+[2m[36m(train_cifar pid=3049137)[0m 100%|█████████▉| 169934848/170498071 [00:09<00:00, 19955619.57it/s]100%|██████████| 170498071/170498071 [00:09<00:00, 18246776.76it/s]
+[2m[36m(train_cifar pid=3049137)[0m Extracting /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00000_0_batch_size=4,lr=0.0043_2023-07-10_15-40-23/data/cifar-10-python.tar.gz to /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00000_0_batch_size=4,lr=0.0043_2023-07-10_15-40-23/data
+[2m[36m(train_cifar pid=3049137)[0m Files already downloaded and verified
+== Status ==
+Current time: 2023-07-10 15:40:43 (running for 00:00:20.18)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz to /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00001_1_batch_size=8,lr=0.0002_2023-07-10_15-40-23/data/cifar-10-python.tar.gz
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 0/170498071 [00:00<?, ?it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 32768/170498071 [00:00<11:47, 240881.78it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 65536/170498071 [00:00<11:31, 246291.52it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 98304/170498071 [00:00<11:26, 248144.88it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 229376/170498071 [00:00<05:15, 538960.16it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   0%|          | 458752/170498071 [00:00<02:56, 962596.91it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   1%|          | 884736/170498071 [00:00<01:38, 1727359.43it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   1%|          | 1802240/170498071 [00:00<00:49, 3396693.24it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   2%|▏         | 3604480/170498071 [00:01<00:25, 6613693.12it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   4%|▍         | 6750208/170498071 [00:01<00:13, 11835910.01it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   6%|▌         | 9863168/170498071 [00:01<00:10, 15483648.88it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   8%|▊         | 12976128/170498071 [00:01<00:08, 17959772.28it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m   9%|▉         | 16121856/170498071 [00:01<00:07, 19463155.35it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  11%|█▏        | 19234816/170498071 [00:01<00:07, 20872271.83it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  13%|█▎        | 22380544/170498071 [00:01<00:06, 21463716.61it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  15%|█▍        | 25460736/170498071 [00:01<00:06, 22173924.80it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  17%|█▋        | 28573696/170498071 [00:02<00:06, 22547489.10it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  19%|█▊        | 31686656/170498071 [00:02<00:05, 23786943.94it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  20%|██        | 34340864/170498071 [00:02<00:05, 24466816.31it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  22%|██▏       | 36831232/170498071 [00:02<00:05, 23350729.12it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  23%|██▎       | 39190528/170498071 [00:02<00:06, 21842870.76it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  24%|██▍       | 41418752/170498071 [00:02<00:06, 21428122.56it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  26%|██▌       | 44236800/170498071 [00:02<00:05, 23126149.79it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  28%|██▊       | 47185920/170498071 [00:02<00:05, 24282017.42it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  29%|██▉       | 49643520/170498071 [00:03<00:05, 23342025.19it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  31%|███       | 52002816/170498071 [00:03<00:05, 22407033.33it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  32%|███▏      | 54263808/170498071 [00:03<00:05, 20776252.53it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  33%|███▎      | 57049088/170498071 [00:03<00:05, 22192818.95it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  35%|███▌      | 59932672/170498071 [00:03<00:04, 23334096.26it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  37%|███▋      | 62783488/170498071 [00:03<00:04, 24494835.25it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  38%|███▊      | 65273856/170498071 [00:03<00:04, 23398983.20it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  40%|███▉      | 67665920/170498071 [00:03<00:04, 22477342.16it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  41%|████      | 69959680/170498071 [00:03<00:04, 20882506.59it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  43%|████▎     | 72712192/170498071 [00:04<00:04, 22069006.55it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  44%|████▍     | 75726848/170498071 [00:04<00:04, 23640577.32it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  46%|████▌     | 78577664/170498071 [00:04<00:03, 24271950.75it/s]
+== Status ==
+Current time: 2023-07-10 15:40:48 (running for 00:00:25.18)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  48%|████▊     | 81035264/170498071 [00:04<00:03, 23619608.78it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  49%|████▉     | 83427328/170498071 [00:04<00:03, 22700691.54it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  50%|█████     | 85721088/170498071 [00:04<00:03, 21204422.58it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  52%|█████▏    | 88375296/170498071 [00:04<00:03, 22537860.39it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  54%|█████▎    | 91291648/170498071 [00:04<00:03, 23919046.06it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  55%|█████▍    | 93716480/170498071 [00:04<00:03, 23553530.58it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  56%|█████▋    | 96108544/170498071 [00:05<00:03, 21975691.60it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  58%|█████▊    | 98336768/170498071 [00:05<00:03, 20381783.68it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  59%|█████▉    | 100696064/170498071 [00:05<00:03, 19988224.97it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  61%|██████    | 103612416/170498071 [00:05<00:03, 20393525.53it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  62%|██████▏   | 106463232/170498071 [00:05<00:03, 20598103.77it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  64%|██████▍   | 109445120/170498071 [00:05<00:02, 21009363.60it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  66%|██████▌   | 112427008/170498071 [00:05<00:02, 21257388.47it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  68%|██████▊   | 115474432/170498071 [00:06<00:02, 21497187.21it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  69%|██████▉   | 118489088/170498071 [00:06<00:02, 21647517.62it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  71%|███████   | 121470976/170498071 [00:06<00:02, 21743185.20it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  73%|███████▎  | 124518400/170498071 [00:06<00:02, 21859205.16it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  75%|███████▍  | 127467520/170498071 [00:06<00:01, 23642508.80it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  76%|███████▌  | 129892352/170498071 [00:06<00:01, 22507714.60it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  78%|███████▊  | 132186112/170498071 [00:06<00:01, 21708689.97it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  79%|███████▉  | 134807552/170498071 [00:06<00:01, 22877042.41it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  80%|████████  | 137134080/170498071 [00:06<00:01, 22027848.49it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  82%|████████▏ | 139526144/170498071 [00:07<00:01, 20855425.52it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  84%|████████▎ | 142606336/170498071 [00:07<00:01, 21587411.06it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  85%|████████▌ | 145719296/170498071 [00:07<00:01, 22115383.39it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  87%|████████▋ | 148832256/170498071 [00:07<00:00, 22494871.41it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  89%|████████▉ | 151814144/170498071 [00:07<00:00, 24296046.61it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  91%|█████████ | 154304512/170498071 [00:07<00:00, 22712792.11it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  92%|█████████▏| 156631040/170498071 [00:07<00:00, 22518188.57it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  93%|█████████▎| 159318016/170498071 [00:07<00:00, 23637464.99it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  95%|█████████▍| 161742848/170498071 [00:08<00:00, 22031243.15it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  96%|█████████▋| 164364288/170498071 [00:08<00:00, 23003749.72it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  98%|█████████▊| 166723584/170498071 [00:08<00:00, 22773712.86it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m  99%|█████████▉| 169082880/170498071 [00:08<00:00, 21861601.11it/s]100%|██████████| 170498071/170498071 [00:08<00:00, 20184948.18it/s]
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m Extracting /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00001_1_batch_size=8,lr=0.0002_2023-07-10_15-40-23/data/cifar-10-python.tar.gz to /mnt/netapp2/Home_FT2/home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22/train_cifar_51e43_00001_1_batch_size=8,lr=0.0002_2023-07-10_15-40-23/data
+== Status ==
+Current time: 2023-07-10 15:40:53 (running for 00:00:30.20)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [1,  2000] loss: 1.989
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m Files already downloaded and verified
+== Status ==
+Current time: 2023-07-10 15:40:58 (running for 00:00:35.21)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [1,  4000] loss: 0.873
+== Status ==
+Current time: 2023-07-10 15:41:03 (running for 00:00:40.22)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+== Status ==
+Current time: 2023-07-10 15:41:08 (running for 00:00:45.23)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [1,  6000] loss: 0.561
+== Status ==
+Current time: 2023-07-10 15:41:13 (running for 00:00:50.24)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [1,  8000] loss: 0.411[32m [repeated 2x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+== Status ==
+Current time: 2023-07-10 15:41:18 (running for 00:00:55.25)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+== Status ==
+Current time: 2023-07-10 15:41:23 (running for 00:01:00.26)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: None
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |
+|-------------------------+----------+----------------------+--------------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |
++-------------------------+----------+----------------------+--------------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [1, 10000] loss: 0.324[32m [repeated 2x across cluster][0m
+Result for train_cifar_51e43_00001:
+  accuracy: 0.2421
+  date: 2023-07-10_15-41-24
+  done: false
+  hostname: c209-4
+  iterations_since_restore: 1
+  loss: 2.1006981744766233
+  node_ip: 10.120.209.4
+  pid: 1565453
+  should_checkpoint: true
+  time_since_restore: 56.61681604385376
+  time_this_iter_s: 56.61681604385376
+  time_total_s: 56.61681604385376
+  timestamp: 1688996484
+  training_iteration: 1
+  trial_id: 51e43_00001
+  
+2023-07-10 15:41:29,419	WARNING util.py:315 -- The `process_trial_save` operation took 4.828 s, which may be a performance bottleneck.
+2023-07-10 15:41:29,419	WARNING trial_runner.py:928 -- Consider turning off forced head-worker trial checkpoint syncs by setting sync_on_checkpoint=False. Note that this may result in faulty trial restoration if a failure occurs while the checkpoint is being synced from the worker to the head node.
+== Status ==
+Current time: 2023-07-10 15:41:29 (running for 00:01:06.10)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: -2.1006981744766233
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Current best trial: 51e43_00001 with loss=2.1006981744766233 and parameters={'l1': 256, 'l2': 128, 'lr': 0.00023723972270435048, 'batch_size': 8}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+--------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |   iter |   total time (s) |   loss |   accuracy |
+|-------------------------+----------+----------------------+--------------+------------+--------+------------------+--------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |        |                  |        |            |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |      1 |          56.6168 | 2.1007 |     0.2421 |
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+--------+------------+
+
+
+Result for train_cifar_51e43_00000:
+  accuracy: 0.4086
+  date: 2023-07-10_15-41-30
+  done: false
+  hostname: c209-2
+  iterations_since_restore: 1
+  loss: 1.6358745408535003
+  node_ip: 10.120.209.2
+  pid: 3049137
+  should_checkpoint: true
+  time_since_restore: 63.446489095687866
+  time_this_iter_s: 63.446489095687866
+  time_total_s: 63.446489095687866
+  timestamp: 1688996490
+  training_iteration: 1
+  trial_id: 51e43_00000
+  
+== Status ==
+Current time: 2023-07-10 15:41:34 (running for 00:01:11.17)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: -1.868286357665062
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |      1 |          56.6168 | 2.1007  |     0.2421 |
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m [2,  2000] loss: 2.017
+[2m[36m(train_cifar pid=3049137)[0m [2,  2000] loss: 1.566
+== Status ==
+Current time: 2023-07-10 15:41:39 (running for 00:01:16.18)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: -1.868286357665062
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |      1 |          56.6168 | 2.1007  |     0.2421 |
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+[2m[36m(train_cifar pid=1565453, ip=10.120.209.4)[0m [2,  4000] loss: 0.958
+== Status ==
+Current time: 2023-07-10 15:41:44 (running for 00:01:21.19)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: -1.868286357665062
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |      1 |          56.6168 | 2.1007  |     0.2421 |
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [2,  4000] loss: 0.795
+== Status ==
+Current time: 2023-07-10 15:41:49 (running for 00:01:26.20)
+Using AsyncHyperBand: num_stopped=0
+Bracket: Iter 2.000: None | Iter 1.000: -1.868286357665062
+Logical resource usage: 4.0/64 CPUs, 4.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 RUNNING)
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status   | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING  | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | RUNNING  | 10.120.209.4:1565453 |            8 | 0.00023724 |      1 |          56.6168 | 2.1007  |     0.2421 |
++-------------------------+----------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+Result for train_cifar_51e43_00001:
+  accuracy: 0.3433
+  date: 2023-07-10_15-41-51
+  done: true
+  hostname: c209-4
+  iterations_since_restore: 2
+  loss: 1.814328784608841
+  node_ip: 10.120.209.4
+  pid: 1565453
+  should_checkpoint: true
+  time_since_restore: 83.57114100456238
+  time_this_iter_s: 26.954324960708618
+  time_total_s: 83.57114100456238
+  timestamp: 1688996511
+  training_iteration: 2
+  trial_id: 51e43_00001
+  
+Trial train_cifar_51e43_00001 completed.
+[2m[36m(train_cifar pid=3049137)[0m [2,  6000] loss: 0.531
+2023-07-10 15:41:53,067	WARNING util.py:315 -- The `process_trial_save` operation took 1.526 s, which may be a performance bottleneck.
+== Status ==
+Current time: 2023-07-10 15:41:54 (running for 00:01:31.26)
+Using AsyncHyperBand: num_stopped=1
+Bracket: Iter 2.000: -1.814328784608841 | Iter 1.000: -1.868286357665062
+Logical resource usage: 2.0/64 CPUs, 2.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (1 RUNNING, 1 TERMINATED)
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status     | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING    | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | TERMINATED | 10.120.209.4:1565453 |            8 | 0.00023724 |      2 |          83.5711 | 1.81433 |     0.3433 |
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+== Status ==
+Current time: 2023-07-10 15:41:59 (running for 00:01:36.27)
+Using AsyncHyperBand: num_stopped=1
+Bracket: Iter 2.000: -1.814328784608841 | Iter 1.000: -1.868286357665062
+Logical resource usage: 2.0/64 CPUs, 2.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (1 RUNNING, 1 TERMINATED)
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status     | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING    | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | TERMINATED | 10.120.209.4:1565453 |            8 | 0.00023724 |      2 |          83.5711 | 1.81433 |     0.3433 |
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [2,  8000] loss: 0.397
+== Status ==
+Current time: 2023-07-10 15:42:04 (running for 00:01:41.28)
+Using AsyncHyperBand: num_stopped=1
+Bracket: Iter 2.000: -1.814328784608841 | Iter 1.000: -1.868286357665062
+Logical resource usage: 2.0/64 CPUs, 2.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (1 RUNNING, 1 TERMINATED)
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status     | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING    | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | TERMINATED | 10.120.209.4:1565453 |            8 | 0.00023724 |      2 |          83.5711 | 1.81433 |     0.3433 |
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+[2m[36m(train_cifar pid=3049137)[0m [2, 10000] loss: 0.318
+== Status ==
+Current time: 2023-07-10 15:42:09 (running for 00:01:46.29)
+Using AsyncHyperBand: num_stopped=1
+Bracket: Iter 2.000: -1.814328784608841 | Iter 1.000: -1.868286357665062
+Logical resource usage: 2.0/64 CPUs, 2.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.6358745408535003 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (1 RUNNING, 1 TERMINATED)
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status     | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | RUNNING    | 10.120.209.2:3049137 |            4 | 0.004257   |      1 |          63.4465 | 1.63587 |     0.4086 |
+| train_cifar_51e43_00001 | TERMINATED | 10.120.209.4:1565453 |            8 | 0.00023724 |      2 |          83.5711 | 1.81433 |     0.3433 |
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+Result for train_cifar_51e43_00000:
+  accuracy: 0.444
+  date: 2023-07-10_15-42-13
+  done: true
+  hostname: c209-2
+  iterations_since_restore: 2
+  loss: 1.5447411932706834
+  node_ip: 10.120.209.2
+  pid: 3049137
+  should_checkpoint: true
+  time_since_restore: 106.72463893890381
+  time_this_iter_s: 43.27814984321594
+  time_total_s: 106.72463893890381
+  timestamp: 1688996533
+  training_iteration: 2
+  trial_id: 51e43_00000
+  
+Trial train_cifar_51e43_00000 completed.
+== Status ==
+Current time: 2023-07-10 15:42:13 (running for 00:01:50.35)
+Using AsyncHyperBand: num_stopped=2
+Bracket: Iter 2.000: -1.6795349889397622 | Iter 1.000: -1.868286357665062
+Logical resource usage: 2.0/64 CPUs, 2.0/4 GPUs
+Current best trial: 51e43_00000 with loss=1.5447411932706834 and parameters={'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Result logdir: /home/ulc/es/dac/ray_results/train_cifar_2023-07-10_15-40-22
+Number of trials: 2/2 (2 TERMINATED)
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+| Trial name              | status     | loc                  |   batch_size |         lr |   iter |   total time (s) |    loss |   accuracy |
+|-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------|
+| train_cifar_51e43_00000 | TERMINATED | 10.120.209.2:3049137 |            4 | 0.004257   |      2 |         106.725  | 1.54474 |     0.444  |
+| train_cifar_51e43_00001 | TERMINATED | 10.120.209.4:1565453 |            8 | 0.00023724 |      2 |          83.5711 | 1.81433 |     0.3433 |
++-------------------------+------------+----------------------+--------------+------------+--------+------------------+---------+------------+
+
+
+2023-07-10 15:42:13,670	INFO tune.py:1111 -- Total run time: 110.36 seconds (110.34 seconds for the tuning loop).
+Best trial config: {'l1': 32, 'l2': 256, 'lr': 0.004256998787756313, 'batch_size': 4}
+Best trial final validation loss: 1.5447411932706834
+Best trial final validation accuracy: 0.444
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/es/dac/Cesga2023Courses/pytorch_dist/ray/000/tune-sample.py", line 219, in <module>
+    main(num_samples=2, max_num_epochs=2, gpus_per_trial=2)
+  File "/mnt/netapp2/Store_uni/home/ulc/es/dac/Cesga2023Courses/pytorch_dist/ray/000/tune-sample.py", line 217, in main
+    test_best_model(best_result)
+  File "/mnt/netapp2/Store_uni/home/ulc/es/dac/Cesga2023Courses/pytorch_dist/ray/000/tune-sample.py", line 154, in test_best_model
+    best_trained_model.load_state_dict(model_state)
+  File "/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/lib/python3.9/site-packages/torch/nn/modules/module.py", line 2041, in load_state_dict
+    raise RuntimeError('Error(s) in loading state_dict for {}:\n\t{}'.format(
+RuntimeError: Error(s) in loading state_dict for Net:
+	Missing key(s) in state_dict: "conv1.weight", "conv1.bias", "conv2.weight", "conv2.bias", "fc1.weight", "fc1.bias", "fc2.weight", "fc2.bias", "fc3.weight", "fc3.bias". 
+	Unexpected key(s) in state_dict: "module.conv1.weight", "module.conv1.bias", "module.conv2.weight", "module.conv2.bias", "module.fc1.weight", "module.fc1.bias", "module.fc2.weight", "module.fc2.bias", "module.fc3.weight", "module.fc3.bias". 

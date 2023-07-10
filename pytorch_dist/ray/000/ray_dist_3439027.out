@@ -1,0 +1,185 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3439027. Previous errors about TMPDIR can be discarded
+
+EnvironmentNameNotFound: Could not find conda environment: simple-trainer.py
+You can list all discoverable environments with `conda info --envs`.
+
+
+IP Head: 10.120.209.1:6379
+Usage stats disabled for future clusters. Restart any current running clusters for this to take effect.
+Starting HEAD at a100-33
+
+ArgumentError: activate does not accept more than one argument:
+['a100-33', '10.120.209.1', '6379']
+
+
+2023-07-10 15:46:05,278	INFO usage_lib.py:382 -- Usage stats collection is disabled.
+2023-07-10 15:46:05,278	INFO scripts.py:712 -- [37mLocal node IP[39m: [1m10.120.209.1[22m
+2023-07-10 15:46:07,675	SUCC scripts.py:749 -- [32m--------------------[39m
+2023-07-10 15:46:07,676	SUCC scripts.py:750 -- [32mRay runtime started.[39m
+2023-07-10 15:46:07,676	SUCC scripts.py:751 -- [32m--------------------[39m
+2023-07-10 15:46:07,676	INFO scripts.py:753 -- [36mNext steps[39m
+2023-07-10 15:46:07,676	INFO scripts.py:756 -- To add another node to this Ray cluster, run
+2023-07-10 15:46:07,676	INFO scripts.py:759 -- [1m  ray start --address='10.120.209.1:6379'[22m
+2023-07-10 15:46:07,676	INFO scripts.py:768 -- To connect to this Ray cluster:
+2023-07-10 15:46:07,676	INFO scripts.py:770 -- [35mimport[39m[26m ray
+2023-07-10 15:46:07,676	INFO scripts.py:771 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'10.120.209.1'[39m[26m)
+2023-07-10 15:46:07,676	INFO scripts.py:783 -- To submit a Ray job using the Ray Jobs CLI:
+2023-07-10 15:46:07,676	INFO scripts.py:784 -- [1m  RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2023-07-10 15:46:07,676	INFO scripts.py:793 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2023-07-10 15:46:07,676	INFO scripts.py:797 -- for more information on submitting Ray jobs to the Ray cluster.
+2023-07-10 15:46:07,676	INFO scripts.py:802 -- To terminate the Ray runtime, run
+2023-07-10 15:46:07,676	INFO scripts.py:803 -- [1m  ray stop[22m
+2023-07-10 15:46:07,676	INFO scripts.py:806 -- To view the status of the cluster, use
+2023-07-10 15:46:07,676	INFO scripts.py:807 --   [1mray status[22m[26m
+2023-07-10 15:46:07,676	INFO scripts.py:811 -- To monitor and debug Ray, view the dashboard at 
+2023-07-10 15:46:07,676	INFO scripts.py:812 --   [1m127.0.0.1:8265[22m[26m
+2023-07-10 15:46:07,676	INFO scripts.py:819 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2023-07-10 15:46:07,676	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-10 15:46:07,677	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-10 15:46:07,677	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+Starting WORKER 1 at a100-34
+
+ArgumentError: activate does not accept more than one argument:
+['a100-34', '10.120.209.1:6379']
+
+
+[2023-07-10 15:46:15,594 I 3104564 3104564] global_state_accessor.cc:356: This node has an IP address of 10.120.209.2, but we cannot find a local Raylet with the same address. This can happen when you connect to the Ray cluster with a different IP address or when connecting to a container.
+2023-07-10 15:46:15,571	INFO scripts.py:894 -- [37mLocal node IP[39m: [1m10.120.209.2[22m
+2023-07-10 15:46:15,595	SUCC scripts.py:906 -- [32m--------------------[39m
+2023-07-10 15:46:15,595	SUCC scripts.py:907 -- [32mRay runtime started.[39m
+2023-07-10 15:46:15,595	SUCC scripts.py:908 -- [32m--------------------[39m
+2023-07-10 15:46:15,595	INFO scripts.py:910 -- To terminate the Ray runtime, run
+2023-07-10 15:46:15,595	INFO scripts.py:911 -- [1m  ray stop[22m
+2023-07-10 15:46:15,595	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-10 15:46:15,596	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-10 15:46:15,596	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
+
+EnvironmentNameNotFound: Could not find conda environment: simple-trainer.py
+You can list all discoverable environments with `conda info --envs`.
+
+
+/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin/python
+2023-07-10 15:46:20,240	INFO worker.py:1452 -- Connecting to existing Ray cluster at address: 10.120.209.1:6379...
+2023-07-10 15:46:20,297	INFO worker.py:1627 -- Connected to Ray cluster. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+Nodes in the Ray cluster:
+[{'NodeID': 'a6edd24011603015e6927d6072f6665e67fa8fbb7a2ab126789367d3', 'Alive': True, 'NodeManagerAddress': '10.120.209.1', 'NodeManagerHostname': 'c209-1', 'NodeManagerPort': 45377, 'ObjectManagerPort': 40781, 'ObjectStoreSocketName': '/scratch/3439027/ray/session_2023-07-10_15-46-05_279402_333546/sockets/plasma_store', 'RayletSocketName': '/scratch/3439027/ray/session_2023-07-10_15-46-05_279402_333546/sockets/raylet', 'MetricsExportPort': 61032, 'NodeName': '10.120.209.1', 'alive': True, 'Resources': {'node:10.120.209.1': 1.0, 'GPU': 2.0, 'memory': 166549500109.0, 'object_store_memory': 75664071475.0, 'CPU': 32.0}}, {'NodeID': '995014a298ea98be55efc27955b236dca2d6a542988fac570452879a', 'Alive': True, 'NodeManagerAddress': '10.120.209.2', 'NodeManagerHostname': 'c209-2', 'NodeManagerPort': 36337, 'ObjectManagerPort': 43959, 'ObjectStoreSocketName': '/scratch/3439027/ray/session_2023-07-10_15-46-05_279402_333546/sockets/plasma_store', 'RayletSocketName': '/scratch/3439027/ray/session_2023-07-10_15-46-05_279402_333546/sockets/raylet', 'MetricsExportPort': 54367, 'NodeName': '10.120.209.2', 'alive': True, 'Resources': {'CPU': 32.0, 'memory': 162153916826.0, 'object_store_memory': 69494535782.0, 'GPU': 2.0, 'node:10.120.209.2': 1.0}}]
+Counter({'10.120.209.1': 16, '10.120.209.2': 16})
+2.2261745929718018
+Counter({'10.120.209.1': 16, '10.120.209.2': 16})
+1.0100481510162354
+Counter({'10.120.209.1': 24, '10.120.209.2': 8})
+1.1524734497070312
+Counter({'10.120.209.1': 16, '10.120.209.2': 16})
+1.0099356174468994
+Counter({'10.120.209.1': 24, '10.120.209.2': 8})
+1.0092012882232666
+Counter({'10.120.209.1': 20, '10.120.209.2': 12})
+1.0095715522766113
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0091235637664795
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0090727806091309
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0248827934265137
+Counter({'10.120.209.1': 16, '10.120.209.2': 16})
+1.0223219394683838
+Counter({'10.120.209.1': 24, '10.120.209.2': 8})
+1.009624719619751
+Counter({'10.120.209.1': 20, '10.120.209.2': 12})
+1.0097324848175049
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0089104175567627
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0098693370819092
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0091466903686523
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0090229511260986
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0089595317840576
+Counter({'10.120.209.1': 17, '10.120.209.2': 15})
+1.0092639923095703
+Counter({'10.120.209.1': 24, '10.120.209.2': 8})
+1.0094683170318604
+Counter({'10.120.209.1': 20, '10.120.209.2': 12})
+1.0091805458068848
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0088534355163574
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.009502649307251
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0093297958374023
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.009047508239746
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0089786052703857
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0091147422790527
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0097308158874512
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0097570419311523
+Counter({'10.120.209.1': 16, '10.120.209.2': 16})
+1.0097544193267822
+Counter({'10.120.209.1': 24, '10.120.209.2': 8})
+1.0092658996582031
+Counter({'10.120.209.1': 20, '10.120.209.2': 12})
+1.009221076965332
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0096092224121094
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.009300947189331
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0091173648834229
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0094623565673828
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0091979503631592
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0093400478363037
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.009676456451416
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0095703601837158
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0096659660339355
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.009730577468872
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0094869136810303
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.00993013381958
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.009538173675537
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0097990036010742
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0095560550689697
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0094125270843506
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0096104145050049
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0095281600952148
+Counter({'10.120.209.1': 20, '10.120.209.2': 12})
+1.0096619129180908
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0096733570098877
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0098042488098145
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0099611282348633
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.009059190750122
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.009091854095459
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.008939504623413
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0091264247894287
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.00911545753479
+Counter({'10.120.209.1': 22, '10.120.209.2': 10})
+1.0093350410461426
+Counter({'10.120.209.1': 21, '10.120.209.2': 11})
+1.0101029872894287
