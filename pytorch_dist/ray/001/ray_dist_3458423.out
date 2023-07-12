@@ -1,0 +1,415 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3458423. Previous errors about TMPDIR can be discarded
+++ scontrol show hostnames 'a100-[35,37]'
++ nodes='a100-35
+a100-37'
++ nodes_array=($nodes)
++ head_node=a100-35
+++ srun --nodes=1 --ntasks=1 -w a100-35 hostname --ip-address
++ head_node_ip=10.120.209.3
++ [[ 10.120.209.3 == *\ * ]]
++ port=6379
++ ip_head=10.120.209.3:6379
++ export ip_head
++ echo 'IP Head: 10.120.209.3:6379'
+IP Head: 10.120.209.3:6379
++ ray disable-usage-stats
+Usage stats disabled for future clusters. Restart any current running clusters for this to take effect.
++ echo 'Starting HEAD at a100-35'
+Starting HEAD at a100-35
++ ./raymaster.sh a100-35 10.120.209.3 6379
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
++ sleep 10
+2023-07-12 14:53:47,710	INFO usage_lib.py:382 -- Usage stats collection is disabled.
+2023-07-12 14:53:47,710	INFO scripts.py:712 -- [37mLocal node IP[39m: [1m10.120.209.3[22m
+2023-07-12 14:53:50,076	SUCC scripts.py:749 -- [32m--------------------[39m
+2023-07-12 14:53:50,077	SUCC scripts.py:750 -- [32mRay runtime started.[39m
+2023-07-12 14:53:50,077	SUCC scripts.py:751 -- [32m--------------------[39m
+2023-07-12 14:53:50,077	INFO scripts.py:753 -- [36mNext steps[39m
+2023-07-12 14:53:50,077	INFO scripts.py:756 -- To add another node to this Ray cluster, run
+2023-07-12 14:53:50,077	INFO scripts.py:759 -- [1m  ray start --address='10.120.209.3:6379'[22m
+2023-07-12 14:53:50,077	INFO scripts.py:768 -- To connect to this Ray cluster:
+2023-07-12 14:53:50,077	INFO scripts.py:770 -- [35mimport[39m[26m ray
+2023-07-12 14:53:50,077	INFO scripts.py:771 -- ray[35m.[39m[26minit(_node_ip_address[35m=[39m[26m[33m'10.120.209.3'[39m[26m)
+2023-07-12 14:53:50,077	INFO scripts.py:783 -- To submit a Ray job using the Ray Jobs CLI:
+2023-07-12 14:53:50,077	INFO scripts.py:784 -- [1m  RAY_ADDRESS='http://127.0.0.1:8265' ray job submit --working-dir . -- python my_script.py[22m
+2023-07-12 14:53:50,077	INFO scripts.py:793 -- See https://docs.ray.io/en/latest/cluster/running-applications/job-submission/index.html 
+2023-07-12 14:53:50,077	INFO scripts.py:797 -- for more information on submitting Ray jobs to the Ray cluster.
+2023-07-12 14:53:50,077	INFO scripts.py:802 -- To terminate the Ray runtime, run
+2023-07-12 14:53:50,077	INFO scripts.py:803 -- [1m  ray stop[22m
+2023-07-12 14:53:50,077	INFO scripts.py:806 -- To view the status of the cluster, use
+2023-07-12 14:53:50,077	INFO scripts.py:807 --   [1mray status[22m[26m
+2023-07-12 14:53:50,077	INFO scripts.py:811 -- To monitor and debug Ray, view the dashboard at 
+2023-07-12 14:53:50,077	INFO scripts.py:812 --   [1m127.0.0.1:8265[22m[26m
+2023-07-12 14:53:50,077	INFO scripts.py:819 -- [4mIf connection to the dashboard fails, check your firewall settings and network configuration.[24m
+2023-07-12 14:53:50,077	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-12 14:53:50,078	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-12 14:53:50,078	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
++ worker_num=1
++ (( i = 1 ))
++ (( i <= worker_num ))
++ node_i=a100-37
++ echo 'Starting WORKER 1 at a100-37'
+Starting WORKER 1 at a100-37
++ ./rayworkers.sh a100-37 10.120.209.3:6379
+
+CommandNotFoundError: Your shell has not been properly configured to use 'conda activate'.
+To initialize your shell, run
+
+    $ conda init <SHELL_NAME>
+
+Currently supported shells are:
+  - bash
+  - fish
+  - tcsh
+  - xonsh
+  - zsh
+  - powershell
+
+See 'conda init --help' for more information and options.
+
+IMPORTANT: You may need to close and restart your shell after running 'conda init'.
+
+
++ sleep 5
+[2023-07-12 14:53:58,189 I 1693349 1693349] global_state_accessor.cc:356: This node has an IP address of 10.120.209.5, but we cannot find a local Raylet with the same address. This can happen when you connect to the Ray cluster with a different IP address or when connecting to a container.
+2023-07-12 14:53:58,168	INFO scripts.py:894 -- [37mLocal node IP[39m: [1m10.120.209.5[22m
+2023-07-12 14:53:58,190	SUCC scripts.py:906 -- [32m--------------------[39m
+2023-07-12 14:53:58,190	SUCC scripts.py:907 -- [32mRay runtime started.[39m
+2023-07-12 14:53:58,190	SUCC scripts.py:908 -- [32m--------------------[39m
+2023-07-12 14:53:58,190	INFO scripts.py:910 -- To terminate the Ray runtime, run
+2023-07-12 14:53:58,190	INFO scripts.py:911 -- [1m  ray stop[22m
+2023-07-12 14:53:58,190	INFO scripts.py:919 -- [36m[1m--block[22m[39m
+2023-07-12 14:53:58,190	INFO scripts.py:920 -- This command will now block forever until terminated by a signal.
+2023-07-12 14:53:58,190	INFO scripts.py:923 -- Running subprocesses are monitored and a message will be printed if any of them terminate unexpectedly. Subprocesses exit with SIGTERM will be treated as graceful, thus NOT reported.
++ (( i++ ))
++ (( i <= worker_num ))
++ conda deactivate
++ local cmd=deactivate
++ case "$cmd" in
++ __conda_activate deactivate
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix deactivate
+++ /home/ulc/es/dac/miniconda3/bin/conda shell.posix deactivate
++ ask_conda='export PATH='\''/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin'\''
+. "/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/deactivate.d/libxml2_deactivate.sh"
+unset CONDA_PREFIX
+unset CONDA_DEFAULT_ENV
+unset CONDA_PROMPT_MODIFIER
+PS1='\'''\''
+export CONDA_SHLVL='\''0'\''
+export CONDA_EXE='\''/home/ulc/es/dac/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/ulc/es/dac/miniconda3/bin/python'\'''
++ eval 'export PATH='\''/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin'\''
+. "/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/deactivate.d/libxml2_deactivate.sh"
+unset CONDA_PREFIX
+unset CONDA_DEFAULT_ENV
+unset CONDA_PROMPT_MODIFIER
+PS1='\'''\''
+export CONDA_SHLVL='\''0'\''
+export CONDA_EXE='\''/home/ulc/es/dac/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/ulc/es/dac/miniconda3/bin/python'\'''
+++ export PATH=/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin
+++ PATH=/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin
+++ . /mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/deactivate.d/libxml2_deactivate.sh
++++ test -n ''
++++ unset XML_CATALOG_FILES
++++ unset xml_catalog_files_libxml2
+++ unset CONDA_PREFIX
+++ unset CONDA_DEFAULT_ENV
+++ unset CONDA_PROMPT_MODIFIER
+++ PS1=
+++ export CONDA_SHLVL=0
+++ CONDA_SHLVL=0
+++ export CONDA_EXE=/home/ulc/es/dac/miniconda3/bin/conda
+++ CONDA_EXE=/home/ulc/es/dac/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/ulc/es/dac/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/ulc/es/dac/miniconda3/bin/python
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ conda activate mytorchdist
++ local cmd=activate
++ case "$cmd" in
++ __conda_activate activate mytorchdist
++ '[' -n '' ']'
++ local ask_conda
+++ PS1=
+++ __conda_exe shell.posix activate mytorchdist
+++ /home/ulc/es/dac/miniconda3/bin/conda shell.posix activate mytorchdist
++ ask_conda='PS1='\''(mytorchdist) '\''
+export PATH='\''/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin'\''
+export CONDA_PREFIX='\''/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''mytorchdist'\''
+export CONDA_PROMPT_MODIFIER='\''(mytorchdist) '\''
+export CONDA_EXE='\''/home/ulc/es/dac/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/ulc/es/dac/miniconda3/bin/python'\''
+. "/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/activate.d/libxml2_activate.sh"'
++ eval 'PS1='\''(mytorchdist) '\''
+export PATH='\''/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin'\''
+export CONDA_PREFIX='\''/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist'\''
+export CONDA_SHLVL='\''1'\''
+export CONDA_DEFAULT_ENV='\''mytorchdist'\''
+export CONDA_PROMPT_MODIFIER='\''(mytorchdist) '\''
+export CONDA_EXE='\''/home/ulc/es/dac/miniconda3/bin/conda'\''
+export _CE_M='\'''\''
+export _CE_CONDA='\'''\''
+export CONDA_PYTHON_EXE='\''/home/ulc/es/dac/miniconda3/bin/python'\''
+. "/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/activate.d/libxml2_activate.sh"'
+++ PS1='(mytorchdist) '
+++ export PATH=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin
+++ PATH=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/root/6.24/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/local/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/cuda/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/lib/llvm/10/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/opt/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/usr/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/tmp/bin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/usr/sbin:/mnt/netapp1/Optcesga_FT2_RHEL7/2020/gentoo/22072020/sbin:/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin:/home/ulc/es/dac/mypython/bin:/mnt/netapp2/Home_FT2/home/ulc/es/dac/.vscode-server/bin/660393deaaa6d1996740ff4880f1bad43768c814/bin/remote-cli:/home/ulc/es/dac/miniconda3/condabin:/home/ulc/es/dac/bin:/home/ulc/es/dac/bin
+++ export CONDA_PREFIX=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist
+++ CONDA_PREFIX=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist
+++ export CONDA_SHLVL=1
+++ CONDA_SHLVL=1
+++ export CONDA_DEFAULT_ENV=mytorchdist
+++ CONDA_DEFAULT_ENV=mytorchdist
+++ export 'CONDA_PROMPT_MODIFIER=(mytorchdist) '
+++ CONDA_PROMPT_MODIFIER='(mytorchdist) '
+++ export CONDA_EXE=/home/ulc/es/dac/miniconda3/bin/conda
+++ CONDA_EXE=/home/ulc/es/dac/miniconda3/bin/conda
+++ export _CE_M=
+++ _CE_M=
+++ export _CE_CONDA=
+++ _CE_CONDA=
+++ export CONDA_PYTHON_EXE=/home/ulc/es/dac/miniconda3/bin/python
+++ CONDA_PYTHON_EXE=/home/ulc/es/dac/miniconda3/bin/python
+++ . /mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/conda/activate.d/libxml2_activate.sh
++++ test -n ''
++++ xml_catalog_files_libxml2=
++++ XML_CATALOG_FILES=
++++ conda_catalog_files=
++++ ifs_libxml2=' 	
+'
++++ IFS=' '
++++ rem=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist
++++ for pre in ${rem}
++++ test '' = /mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist
++++ conda_catalog_files=/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist
++++ rem=
++++ IFS=' 	
+'
++++ conda_catalog_files='file:///mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/xml/catalog file:///etc/xml/catalog'
++++ export 'XML_CATALOG_FILES=file:///mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/xml/catalog file:///etc/xml/catalog'
++++ XML_CATALOG_FILES='file:///mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/etc/xml/catalog file:///etc/xml/catalog'
++++ unset conda_catalog_files ifs_libxml2 rem
++ __conda_hashr
++ '[' -n '' ']'
++ '[' -n '' ']'
++ hash -r
++ which python
+/mnt/netapp2/Store_uni/home/ulc/es/dac/conda/envs/mytorchdist/bin/python
++ python -u ray-train-mnist.py 32
+2023-07-12 14:54:08,329	INFO worker.py:1452 -- Connecting to existing Ray cluster at address: 10.120.209.3:6379...
+2023-07-12 14:54:08,335	INFO worker.py:1627 -- Connected to Ray cluster. View the dashboard at [1m[32m127.0.0.1:8265 [39m[22m
+2023-07-12 14:54:09,558	INFO tensorboardx.py:178 -- pip install "ray[tune]" to see TensorBoard files.
+2023-07-12 14:54:09,558	WARNING callback.py:144 -- The TensorboardX logger cannot be instantiated because either TensorboardX or one of it's dependencies is not installed. Please make sure you have the latest version of TensorboardX installed: `pip install -U tensorboardx`
+== Status ==
+Current time: 2023-07-12 14:54:09 (running for 00:00:00.11)
+Using FIFO scheduling algorithm.
+Logical resource usage: 0/64 CPUs, 0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 PENDING)
++--------------------------+----------+-------+
+| Trial name               | status   | loc   |
+|--------------------------+----------+-------|
+| TorchTrainer_316de_00000 | PENDING  |       |
++--------------------------+----------+-------+
+
+
+== Status ==
+Current time: 2023-07-12 14:54:14 (running for 00:00:05.12)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+
+| Trial name               | status   | loc                  |
+|--------------------------+----------+----------------------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |
++--------------------------+----------+----------------------+
+
+
+[2m[36m(TorchTrainer pid=1693699, ip=10.120.209.5)[0m 2023-07-12 14:54:16,897	INFO backend_executor.py:137 -- Starting distributed worker processes: ['1693828 (10.120.209.5)', '1693829 (10.120.209.5)']
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m 2023-07-12 14:54:18,312	INFO config.py:86 -- Setting up process group for: env:// [rank=0, world_size=2]
+== Status ==
+Current time: 2023-07-12 14:54:19 (running for 00:00:10.13)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+
+| Trial name               | status   | loc                  |
+|--------------------------+----------+----------------------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |
++--------------------------+----------+----------------------+
+
+
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m 2023-07-12 14:54:19,760	INFO train_loop_utils.py:286 -- Moving model to device: cuda:0
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m 2023-07-12 14:54:19,761	INFO train_loop_utils.py:346 -- Wrapping provided model in DistributedDataParallel.
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m loss: 2.308627  [    0/30000]
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m loss: 2.275773  [12800/30000]
+== Status ==
+Current time: 2023-07-12 14:54:24 (running for 00:00:15.14)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+
+| Trial name               | status   | loc                  |
+|--------------------------+----------+----------------------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |
++--------------------------+----------+----------------------+
+
+
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m Test Error: 
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m  Accuracy: 48.1%, Avg loss: 2.205170 
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m 
+Result for TorchTrainer_316de_00000:
+  date: 2023-07-12_14-54-26
+  done: false
+  hostname: c209-5
+  iterations_since_restore: 1
+  loss: 2.205170189499096
+  node_ip: 10.120.209.5
+  pid: 1693699
+  time_since_restore: 12.306867837905884
+  time_this_iter_s: 12.306867837905884
+  time_total_s: 12.306867837905884
+  timestamp: 1689166466
+  training_iteration: 1
+  trial_id: 316de_00000
+  
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m loss: 2.182788  [ 9600/30000][32m [repeated 15x across cluster] (Ray deduplicates logs by default. Set RAY_DEDUP_LOGS=0 to disable log deduplication, or see https://docs.ray.io/en/master/ray-observability/ray-logging.html#log-deduplication for more options.)[0m
+== Status ==
+Current time: 2023-07-12 14:54:29 (running for 00:00:20.24)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+--------+------------------+---------+
+| Trial name               | status   | loc                  |   iter |   total time (s) |    loss |
+|--------------------------+----------+----------------------+--------+------------------+---------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |      1 |          12.3069 | 2.20517 |
++--------------------------+----------+----------------------+--------+------------------+---------+
+
+
+[2m[36m(RayTrainWorker pid=1693828, ip=10.120.209.5)[0m loss: 2.123763  [25600/30000][32m [repeated 20x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m Test Error: [32m [repeated 3x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m  Accuracy: 50.8%, Avg loss: 2.052153 [32m [repeated 3x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m [32m [repeated 3x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m loss: 2.010311  [ 9600/30000][32m [repeated 8x across cluster][0m
+Result for TorchTrainer_316de_00000:
+  date: 2023-07-12_14-54-34
+  done: false
+  hostname: c209-5
+  iterations_since_restore: 3
+  loss: 1.8152220499743321
+  node_ip: 10.120.209.5
+  pid: 1693699
+  time_since_restore: 19.967840671539307
+  time_this_iter_s: 3.8298234939575195
+  time_total_s: 19.967840671539307
+  timestamp: 1689166474
+  training_iteration: 3
+  trial_id: 316de_00000
+  
+== Status ==
+Current time: 2023-07-12 14:54:34 (running for 00:00:25.29)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+--------+------------------+---------+
+| Trial name               | status   | loc                  |   iter |   total time (s) |    loss |
+|--------------------------+----------+----------------------+--------+------------------+---------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |      3 |          19.9678 | 1.81522 |
++--------------------------+----------+----------------------+--------+------------------+---------+
+
+
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m loss: 1.876230  [28800/30000][32m [repeated 15x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m Test Error: [32m [repeated 2x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m  Accuracy: 52.4%, Avg loss: 1.814853 [32m [repeated 2x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m [32m [repeated 2x across cluster][0m
+== Status ==
+Current time: 2023-07-12 14:54:39 (running for 00:00:30.31)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 RUNNING)
++--------------------------+----------+----------------------+--------+------------------+---------+
+| Trial name               | status   | loc                  |   iter |   total time (s) |    loss |
+|--------------------------+----------+----------------------+--------+------------------+---------|
+| TorchTrainer_316de_00000 | RUNNING  | 10.120.209.5:1693699 |      4 |          23.7886 | 1.58791 |
++--------------------------+----------+----------------------+--------+------------------+---------+
+
+
+Result for TorchTrainer_316de_00000:
+  date: 2023-07-12_14-54-38
+  done: true
+  experiment_tag: '0'
+  hostname: c209-5
+  iterations_since_restore: 4
+  loss: 1.5879055246426041
+  node_ip: 10.120.209.5
+  pid: 1693699
+  time_since_restore: 23.788583755493164
+  time_this_iter_s: 3.8207430839538574
+  time_total_s: 23.788583755493164
+  timestamp: 1689166478
+  training_iteration: 4
+  trial_id: 316de_00000
+  
+Trial TorchTrainer_316de_00000 completed.
+== Status ==
+Current time: 2023-07-12 14:54:40 (running for 00:00:30.85)
+Using FIFO scheduling algorithm.
+Logical resource usage: 1.0/64 CPUs, 2.0/4 GPUs
+Result logdir: /home/ulc/es/dac/ray_results/TorchTrainer_2023-07-12_14-54-09
+Number of trials: 1/1 (1 TERMINATED)
++--------------------------+------------+----------------------+--------+------------------+---------+
+| Trial name               | status     | loc                  |   iter |   total time (s) |    loss |
+|--------------------------+------------+----------------------+--------+------------------+---------|
+| TorchTrainer_316de_00000 | TERMINATED | 10.120.209.5:1693699 |      4 |          23.7886 | 1.58791 |
++--------------------------+------------+----------------------+--------+------------------+---------+
+
+
+2023-07-12 14:54:42,130	INFO tune.py:1111 -- Total run time: 32.58 seconds (30.84 seconds for the tuning loop).
+Last result: {'loss': 1.5879055246426041, 'timestamp': 1689166478, 'time_this_iter_s': 3.8207430839538574, 'done': True, 'training_iteration': 4, 'trial_id': '316de_00000', 'date': '2023-07-12_14-54-38', 'time_total_s': 23.788583755493164, 'pid': 1693699, 'hostname': 'c209-5', 'node_ip': '10.120.209.5', 'config': {'train_loop_config': {'lr': 0.001, 'batch_size': 64, 'epochs': 4}}, 'time_since_restore': 23.788583755493164, 'iterations_since_restore': 4, 'experiment_tag': '0'}
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m loss: 1.772712  [ 9600/30000][32m [repeated 8x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m loss: 1.622814  [28800/30000][32m [repeated 12x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m Test Error: [32m [repeated 2x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m  Accuracy: 54.6%, Avg loss: 1.588352 [32m [repeated 2x across cluster][0m
+[2m[36m(RayTrainWorker pid=1693829, ip=10.120.209.5)[0m [32m [repeated 2x across cluster][0m
