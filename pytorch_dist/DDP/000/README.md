@@ -17,4 +17,16 @@ A continuación, construimos el ddp_model a través del método DDP, al cual le 
 - Una lista con los dispositivos de salida (global_rank)
 
   https://github.com/diegoandradecanosa/Cesga2023Courses/blob/14187ad82941a502e051b8abba55b8e65ff1e226/pytorch_dist/DDP/000/ddp.py#L40
+
+  La carga de los datos se realiza a través de un **sampler** distribuido
+
+  https://github.com/diegoandradecanosa/Cesga2023Courses/blob/14187ad82941a502e051b8abba55b8e65ff1e226/pytorch_dist/DDP/000/ddp.py#L42-L45
   
+
+  El optimizador usa el *ddp_model* como parámetro
+
+  https://github.com/diegoandradecanosa/Cesga2023Courses/blob/14187ad82941a502e051b8abba55b8e65ff1e226/pytorch_dist/DDP/000/ddp.py#L49
+
+  El bucle de entrenamiento no tiene ninguna peculiaridad, salvo la asociación de los dastos con la GPU de Nvidia
+
+  https://github.com/diegoandradecanosa/Cesga2023Courses/blob/14187ad82941a502e051b8abba55b8e65ff1e226/pytorch_dist/DDP/000/ddp.py#L51-L62
