@@ -17,3 +17,17 @@ python mnist_sample.py
 - Activamos el entorno del curso
 - Ejecutamos el script directamente con Python
 
+La definición de un *DataModule* propio en Lightning se realiza definiendo una clase que hereda de *LightningDataModule*
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/c2897f5e2612cc606c1cd2d955b49f57d56074e2/pytorch_dist/lightning/004/mnist_datamodule.py#L147
+
+Se deben definir implementaciones para todos o varios de estos elementos: *prepare_data,setup,train_dataloader,val_dataloader,test_dataloader* y *predict_dataloader*.
+
+Veamos un ejemplo de implementación de uno de estos métodos para nuestro ejemplo
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/c2897f5e2612cc606c1cd2d955b49f57d56074e2/pytorch_dist/lightning/004/mnist_datamodule.py#L207-L216
+
+El *DataModule* definido se usa en el código principal como un argumento más para llamar al *MNISTDataModule* 
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/c2897f5e2612cc606c1cd2d955b49f57d56074e2/pytorch_dist/lightning/004/mnist_sample.py#L56-L61
+
