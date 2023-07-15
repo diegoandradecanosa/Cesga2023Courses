@@ -53,8 +53,12 @@ echo "Starting HEAD at $head_node"
     done
 
 #source $STORE/conda/envs/mytorchdist/bin/activate
-conda deactivate
-conda activate mytorchdist
+#conda deactivate
+#conda activate mytorchdist
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+source $STORE/conda/envs/mytorchdist/bin/activate
 
 which python
 python -u $1 "$SLURM_CPUS_PER_TASK"

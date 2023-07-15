@@ -13,9 +13,14 @@ H=`hostname --alias`
 THEID=`echo -e $HOSTNAMES  | python3 -c "import sys;[sys.stdout.write(str(i)) for i,line in enumerate(next(sys.stdin).split(' ')) if line.strip() == '$H'.strip()]"`
 echo THEID=$THEID
 
-module load miniconda3
+#module load miniconda3
 # conda activate myacc
+#source $STORE/conda/envs/mytorchdist/bin/activate
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
 source $STORE/conda/envs/mytorchdist/bin/activate
+
 export NCCL_DEBUG=INFO
 export PYTHONFAULTHANDLER=1
 #accelerate launch --multi_gpu --num_machines 2 --num_processes 2 --num_cpu_threads_per_process 32 accelerate_sample.py
