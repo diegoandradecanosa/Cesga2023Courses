@@ -19,7 +19,7 @@ echo THEID=$THEID
 module purge
 module load cesga/system miniconda3/22.11
 eval "$(conda shell.bash hook)"
-source $STORE/conda/envs/mytorchdist/bin/activate
+source $STORE/mytorchdist/bin/activate
 
 export NCCL_DEBUG=INFO
 export PYTHONFAULTHANDLER=1
