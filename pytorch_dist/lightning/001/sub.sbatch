@@ -8,10 +8,10 @@
 #SBATCH -c 32
 #SBATCH --time=0-00:10:00
 
-#source $STORE/conda/envs/mytorchdist/bin/activate
 module purge
 module load cesga/system miniconda3/22.11
 eval "$(conda shell.bash hook)"
+conda deactivate
 source $STORE/mytorchdist/bin/activate
 
 # debugging flags (optional)

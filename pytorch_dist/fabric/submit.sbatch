@@ -17,4 +17,9 @@ export PYTHONFAULTHANDLER=1
 # export NCCL_SOCKET_IFNAME=^docker0,lo
 
 # Run your training script
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+conda deactivate
+source $STORE/mytorchdist/bin/activate
 srun mnist.sh

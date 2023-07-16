@@ -18,6 +18,12 @@ master_addr=$(scontrol show hostnames "$SLURM_JOB_NODELIST" | head -n 1)
 export MASTER_ADDR=$master_addr
 echo "MASTER_ADDR="$MASTER_ADDR
 
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+conda deactivate
+source $STORE/mytorchdist/bin/activate
+
 srun ./mnist_classify_ddp.sh
 
 
