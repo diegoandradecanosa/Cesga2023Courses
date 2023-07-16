@@ -10,7 +10,7 @@
 module purge
 module load cesga/system miniconda3/22.11
 eval "$(conda shell.bash hook)"
-source $STORE/conda/envs/mytorchdist/bin/activate
+source $STORE/mytorchdist/bin/activate
 python mnist_classify_ddp.py --epochs=2
 #torchrun mnist_classify_ddp.py --epochs=2
 
