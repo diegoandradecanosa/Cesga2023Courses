@@ -12,8 +12,11 @@
 
 set -x #echo on
 
-#source $STORE/conda/envs/mytorchdist/bin/activate
-#conda activate mytorchdist
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+conda deactivate
+source $STORE/mytorchdist/bin/activate
 
 nodes=$(scontrol show hostnames "$SLURM_JOB_NODELIST")
 nodes_array=($nodes)
@@ -52,13 +55,6 @@ echo "Starting HEAD at $head_node"
         sleep 5
     done
 
-#source $STORE/conda/envs/mytorchdist/bin/activate
-#conda deactivate
-#conda activate mytorchdist
-module purge
-module load cesga/system miniconda3/22.11
-eval "$(conda shell.bash hook)"
-source $STORE/mytorchdist/bin/activate
 
 which python
 #python -u $1 "$SLURM_CPUS_PER_TASK"
