@@ -118,7 +118,7 @@ def train_fashion_mnist(num_workers=2, use_gpu=False):
     trainer = TorchTrainer(
         train_loop_per_worker=train_func,
         train_loop_config={"lr": 1e-3, "batch_size": 64, "epochs": 4},
-        scaling_config=ScalingConfig(num_workers=num_workers, use_gpu=use_gpu),
+        scaling_config=ScalingConfig(num_workers=num_workers, use_gpu=use_gpu,resources_per_worker={"CPU": 2, "GPU": 2}),
     )
     result = trainer.fit()
     print(f"Last result: {result.metrics}")

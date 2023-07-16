@@ -58,7 +58,7 @@ echo "Starting HEAD at $head_node"
 module purge
 module load cesga/system miniconda3/22.11
 eval "$(conda shell.bash hook)"
-source $STORE/conda/envs/mytorchdist/bin/activate
+source $STORE/mytorchdist/bin/activate
 
 which python
 #python -u $1 "$SLURM_CPUS_PER_TASK"
