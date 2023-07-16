@@ -4,11 +4,10 @@ Este ejemplo contiene dos códigos que ilustran:
 - El lanzamiento de un trabajo básico de Ray ([simple-trainer.py](https://github.com/diegoandradecanosa/Cesga2023Courses/blob/main/pytorch_dist/ray/000/simple-trainer.py))
 - El lanzamiento de un proceso de HPO a través de Ray Tune ([tune-sample.py](https://github.com/diegoandradecanosa/Cesga2023Courses/blob/main/pytorch_dist/ray/000/tune-sample.py))
 
-En ambos casos el lanzamiento se realizar a través del mismo script que se parametriza con el nombre del script Python a lanzar en cada caso. Es decir, el lanzamiento se haría
-como sigue:
+En ambos casos el lanzamiento se realizar a través de sbatch:
 ```
-sbatch ray.sbatch simple-trainer.py
-sbatch ray.sbatch tune-sample.py
+sbatch raysimple.sbatch 
+sbatch raytune.sbatch 
 ```
 En ambos casos se generará una salida siguiendo el esquema de nombre *ray_dist_xxx.out* donde *xxx* es el id del trabajo en SLURM.
 

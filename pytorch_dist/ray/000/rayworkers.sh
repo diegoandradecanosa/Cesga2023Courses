@@ -2,7 +2,11 @@
 
 
 #source $STORE/conda/envs/mytorchdist/bin/activate
-conda activate mytorchdist
+#conda activate mytorchdist
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+source $STORE/conda/envs/mytorchdist/bin/activate
 
 node_i=${1}
 ip_head=${2}

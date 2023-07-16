@@ -61,4 +61,4 @@ eval "$(conda shell.bash hook)"
 source $STORE/conda/envs/mytorchdist/bin/activate
 
 which python
-python -u $1 "$SLURM_CPUS_PER_TASK"
+python -u ray-train-mnist.py "$SLURM_CPUS_PER_TASK"

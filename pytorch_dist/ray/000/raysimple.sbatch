@@ -63,4 +63,4 @@ source $STORE/conda/envs/mytorchdist/bin/activate
 which python
 #python -u $1 "$SLURM_CPUS_PER_TASK"
 
-python simple-trainer.py "$SLURM_CPUS_PER_TASK"
+python -u simple-trainer.py "$SLURM_CPUS_PER_TASK"
