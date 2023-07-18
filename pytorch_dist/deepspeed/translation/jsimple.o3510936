@@ -1,0 +1,71 @@
+slurmstepd: info: Setting TMPDIR to /scratch/3510936. Previous errors about TMPDIR can be discarded
+SLURM_NTASKS: 1
+SLURM_CPUS_PER_TASK: 32
+SLURM_NNODES: 1
+SLURM_NTASKS_PER_NODE: 1
+To make your changes take effect please reactivate your environment
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2021 NVIDIA Corporation
+Built on Sun_Feb_14_21:12:58_PST_2021
+Cuda compilation tools, release 11.2, V11.2.152
+Build cuda_11.2.r11.2/compiler.29618528_0
+
+     active environment : sten
+    active env location : /mnt/netapp2/Store_uni/home/ulc/es/rlc/anaconda3/envs/sten
+            shell level : 4
+       user config file : /home/ulc/es/rlc/.condarc
+ populated config files : /home/ulc/es/rlc/.condarc
+          conda version : 22.11.1
+    conda-build version : 3.22.0
+         python version : 3.9.13.final.0
+       virtual packages : __archspec=1=x86_64
+                          __cuda=11.5=0
+                          __glibc=2.28=0
+                          __linux=4.18.0=0
+                          __unix=0=0
+       base environment : /mnt/netapp2/Store_uni/home/ulc/es/rlc/anaconda3  (writable)
+      conda av data dir : /mnt/netapp2/Store_uni/home/ulc/es/rlc/anaconda3/etc/conda
+  conda av metadata url : None
+           channel URLs : https://repo.anaconda.com/pkgs/main/linux-64
+                          https://repo.anaconda.com/pkgs/main/noarch
+                          https://repo.anaconda.com/pkgs/r/linux-64
+                          https://repo.anaconda.com/pkgs/r/noarch
+          package cache : /mnt/lustre/scratch/nlsas/home/ulc/es/rlc/anaconda3
+       envs directories : /mnt/netapp2/Store_uni/home/ulc/es/rlc/anaconda3/envs
+                          /home/ulc/es/rlc/.conda/envs
+               platform : linux-64
+             user-agent : conda/22.11.1 requests/2.28.1 CPython/3.9.13 Linux/4.18.0-305.3.1.el8_4.x86_64 rocky/8.4 glibc/2.28
+                UID:GID : 13325:104
+             netrc file : None
+           offline mode : False
+
+SLURM_JOB_NUM_NODES 1
+HOSTNAME a100-32
+Args train.sh: 
+[2023-07-18 08:16:27,897] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-07-18 08:16:29,365] [WARNING] [runner.py:196:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+Detected CUDA_VISIBLE_DEVICES=0,1 but ignoring it because one or several of --include/--exclude/--num_gpus/--num_nodes cl args were used. If you want to use CUDA_VISIBLE_DEVICES don't pass any of these arguments to deepspeed.
+[2023-07-18 08:16:29,378] [INFO] [runner.py:555:main] cmd = /mnt/netapp2/Store_uni/home/ulc/es/rlc/anaconda3/envs/sten/bin/python3.10 -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMCwgMV19 --master_addr=127.0.0.1 --master_port=29500 --enable_each_rank_log=None test-t5-base.py
+[2023-07-18 08:16:30,337] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-07-18 08:16:31,607] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [0, 1]}
+[2023-07-18 08:16:31,607] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=2, node_rank=0
+[2023-07-18 08:16:31,607] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0, 1]})
+[2023-07-18 08:16:31,607] [INFO] [launch.py:163:main] dist_world_size=2
+[2023-07-18 08:16:31,607] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=0,1
+[2023-07-18 08:16:32,577] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-07-18 08:16:32,586] [INFO] [real_accelerator.py:110:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-07-18 08:17:39,173] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2023-07-18 08:17:39,173] [INFO] [logging.py:96:log_dist] [Rank -1] DeepSpeed info: version=0.9.5, git-hash=unknown, git-branch=unknown
+[2023-07-18 08:17:39,174] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter mp_size is deprecated use tensor_parallel.tp_size instead
+[2023-07-18 08:17:39,174] [WARNING] [config_utils.py:69:_process_deprecated_field] Config parameter mp_size is deprecated use tensor_parallel.tp_size instead
+[2023-07-18 08:17:39,174] [INFO] [logging.py:96:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2023-07-18 08:17:39,174] [INFO] [logging.py:96:log_dist] [Rank -1] quantize_bits = 8 mlp_extra_grouping = False, quantize_groups = 1
+[2023-07-18 08:17:39,176] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2023-07-18 08:17:39,176] [WARNING] [comm.py:152:init_deepspeed_backend] NCCL backend in DeepSpeed not yet implemented
+[2023-07-18 08:17:39,176] [INFO] [comm.py:594:init_distributed] cdb=None
+[2023-07-18 08:17:39,176] [INFO] [comm.py:594:init_distributed] cdb=None
+[2023-07-18 08:17:39,176] [INFO] [comm.py:625:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+[{'translation_text': 'Le renard brun rapide saute au-dessus du chien lazy.'}]
+[{'translation_text': 'Le renard brun rapide saute au-dessus du chien lazy.'}]
+[2023-07-18 08:17:55,695] [INFO] [launch.py:347:main] Process 1381260 exits successfully.
+[2023-07-18 08:17:55,695] [INFO] [launch.py:347:main] Process 1381259 exits successfully.
