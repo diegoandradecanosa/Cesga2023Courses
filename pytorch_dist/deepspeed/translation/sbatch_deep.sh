@@ -19,5 +19,10 @@ echo SLURM_NTASKS_PER_NODE: $SLURM_NTASKS_PER_NODE
 PS=1
 WORKERS=$((SLURM_NTASKS-PS))
 
+module purge
+module load cesga/system miniconda3/22.11
+eval "$(conda shell.bash hook)"
+conda deactivate
+source $STORE/mytorchdist/bin/activate
 
 srun deepspeed --num_gpus 2 test-t5-base.py
