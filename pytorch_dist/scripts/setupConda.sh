@@ -8,7 +8,7 @@ tar -xzf /tmp/mytorchdist.tar.gz -C $STORE/mytorchdist
 source activateconda.sh
 which python
 conda-unpack
-python -m pip install 'urllib3<2' --user
+python -m pip install 'urllib3==1.26.16' --user
 
 
 
