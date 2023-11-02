@@ -1,5 +1,5 @@
 #!/bin/bash
 
-module load tensorflow
+source $STORE/mytf/bin/activate 
 python OneNodeResnet50TrainingTF.py
 
