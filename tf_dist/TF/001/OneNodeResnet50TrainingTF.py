@@ -70,7 +70,15 @@ if __name__ == "__main__":
                                               mode="max",
                                               save_best_only=True,
                                               )
-
+    tensorboard_profiler = K.callbacks.TensorBoard(log_dir='./logs',
+                                                    histogram_freq=0,
+                                                    write_graph=True,
+                                                    write_images=False,
+                                                    update_freq='epoch',
+                                                    profile_batch=(2,8),
+                                                    embeddings_freq=0,
+                                                    embeddings_metadata=None)
+    
     model.compile(loss='categorical_crossentropy',
                   optimizer=K.optimizers.RMSprop(lr=2e-5),
                   metrics=['accuracy'])
@@ -78,7 +86,7 @@ if __name__ == "__main__":
     
     history = model.fit(x_train, y_train, batch_size=32, epochs=1, verbose=1,
                         validation_data=(x_test, y_test),
-                        callbacks=[check_point])
+                        callbacks=[check_point,tensorboard_profiler])
     model.summary()
     model.save("cifar10.h5")
 
