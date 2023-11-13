@@ -13,38 +13,41 @@ from tensorflow.keras.optimizers import Adam
 import json
 import os
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
-if gpus:
-  try:
-    for gpu in gpus:
-      tf.config.experimental.set_memory_growth(gpu, True)
-  except RuntimeError as e:
-    print(e)
 
-def set_tf_config(resolver, environment=None):
-    """Set the TF_CONFIG env variable from the given cluster resolver"""
-    cfg = {
-        'cluster': resolver.cluster_spec().as_dict(),
-        'task': {
-            'type': resolver.get_task_info()[0],
-            'index': resolver.get_task_info()[1],
-        },
-        'rpc_layer': resolver.rpc_layer,
-    }
-    if environment:
-        cfg['environment'] = environment
-    os.environ['TF_CONFIG'] = json.dumps(cfg)
+def run_ps(task_index, cluster):
+  server = tf.distribute.Server(cluster.as_cluster_def(),
+                           job_name='ps',
+                           task_index=task_index,
+                           protocol='grpc')
+  server.join()
 
-resolver = tf.distribute.cluster_resolver.SlurmClusterResolver()
-set_tf_config(resolver)
-print(resolver.as_dict())
-strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy(cluster_resolver=resolver)
+def run_worker(task_index, cluster):
 
-#cluster_spec=tf.distribute.cluster_resolver.SlurmClusterResolver().cluster_spec()
-#print(cluster_spec)
-#strategy = tf.distribute.MultiWorkerMirroredStrategy(cluster_resolver=cluster_spec)
+  server = tf.distribute.Server(cluster.as_cluster_def(),
+                           job_name='worker',
+                           task_index=task_index,
+                           protocol='grpc')
+  server.join()
 
+cluster_resolver = tf.distribute.cluster_resolver.SlurmClusterResolver(
+      {'ps': 1, 'worker': int(os.environ['SLURM_NTASKS'])-1},
+      port_base=8888,
+      tasks_per_node=2,
+      gpus_per_node=2,
+      gpus_per_task=1,
+      auto_set_gpu=True)
 
+cluster = cluster_resolver.cluster_spec()
+job_name, task_index = cluster_resolver.get_task_info()
+
+if job_name == 'ps':
+    run_ps(task_index, cluster)
+else:
+    run_worker(task_index, cluster)
+    
+strategy = tf.distribute.ParameterServerStrategy(
+    cluster_resolver=cluster_resolver)
+  
 dataset_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"
 data_dir = tf.keras.utils.get_file('flower_photos', origin=dataset_url, untar=True)
 data_dir = pathlib.Path(data_dir)
@@ -79,9 +82,6 @@ for images, labels in train_ds.take(1):
     plt.title(class_names[labels[i]])
     plt.axis("off")
 
-
-
-
 with strategy.scope():
   resnet_model = Sequential()
   pretrained_model= tf.keras.applications.ResNet50(include_top=False,
@@ -112,6 +112,3 @@ plt.ylabel('Accuracy')
 plt.xlabel('Epochs')
 plt.legend(['train', 'validation'])
 plt.show()
-
-
-

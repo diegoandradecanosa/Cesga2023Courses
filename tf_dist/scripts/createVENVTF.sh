@@ -8,3 +8,6 @@ pip install jupyterlab-nvdashboard
 pip install -U tensorboard-plugin-profile
 pip install nvidia-pyindex
 pip install nvidia-cuda-cupti
+pip install matplotlib
+pip install portpicker
+pip install tensorflow-datasets

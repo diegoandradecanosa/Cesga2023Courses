@@ -21,6 +21,5 @@ echo SLURM_NTASKS_PER_NODE: $SLURM_NTASKS_PER_NODE
 PS=1
 WORKERS=$((SLURM_NTASKS-PS))
 
-
-
+export LD_LIBRARY_PATH=$STORE/mytf/lib/python3.9/site-packages/nvidia/cuda_cupti/lib/:$LD_LIBRARY_PATH
 srun -n $SLURM_NTASKS -c $SLURM_CPUS_PER_TASK  --resv-ports=$SLURM_NTASKS_PER_NODE -l python $1 -ps $PS -workers $WORKERS
