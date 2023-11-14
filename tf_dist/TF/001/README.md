@@ -81,6 +81,8 @@ cd $STORE/Cesga2023Courses/tf_dist/TF/001
 python OneNodeResnet50Training.py
 ```
 
+Por defecto, cuando TF encuentra una GPU disponible y los drivers correspondientes para accederla, la usa
+
 
 
 
