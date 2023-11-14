@@ -24,7 +24,7 @@ Sigue el notebook Cesga2023Courses/tf_dist/TF/001/TensorBoard.ipynb
 
 Inicia TensorBoard en el terminal
 
-````bash
+```bash
 export LD_LIBRARY_PATH=$STORE/mytf/lib/python3.9/site-packages/nvidia/cuda_cupti/lib/:$LD_LIBRARY_PATH
 jupyter lab --no-browser --ip=`hostname -i`
 ```
