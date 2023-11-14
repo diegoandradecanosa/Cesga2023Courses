@@ -64,5 +64,24 @@ python OneNodeResnet50TrainingTF.py
 
 Mientras se ejecuta el script anterior, observa el uso de la GPU a través de las funciones de NVDashBoard (Controles en la derecha de jupyterlab)
 
+# Actividad una GPU
+
+Conéctate al FT3 y a un nodo con una GPU, luego carga el entorno mytf
+
+```bash
+ssh tuusuario@ft3.cesga.es
+compute --gpu
+source $STORE/mytf/bin/activate
+```
+
+Ejecuta el script
+
+```bash
+cd $STORE/Cesga2023Courses/tf_dist/TF/001
+python OneNodeResnet50Training.py
+```
+
+
+
 
 

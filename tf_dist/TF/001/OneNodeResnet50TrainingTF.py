@@ -27,8 +27,8 @@ def preprocess_data(X, Y):
 
 
 if __name__ == "__main__":
-    tf.config.threading.set_intra_op_parallelism_threads(2)
-    tf.config.threading.set_inter_op_parallelism_threads(1)
+#    tf.config.threading.set_intra_op_parallelism_threads(2)
+#    tf.config.threading.set_inter_op_parallelism_threads(1)
     (x_train, y_train), (x_test, y_test) = K.datasets.cifar10.load_data()
     print((x_train.shape, y_train.shape))
     x_train, y_train = preprocess_data(x_train, y_train)
