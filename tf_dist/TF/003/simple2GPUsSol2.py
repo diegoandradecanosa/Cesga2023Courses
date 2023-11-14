@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
+# In[4]:
 #Based on: https://chroniclesofai.com/transfer-learning-with-keras-resnet-50/
 #and https://github.com/nachi-hebbar/Transfer-Learning-ResNet-Keras/blob/main/ResNet_50.ipynb
 import matplotlib.pyplot as plt
@@ -14,8 +14,14 @@ from tensorflow.keras.layers import Dense,Flatten
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.optimizers import Adam
 import os
-# In[2]:
 
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+  try:
+    for gpu in gpus:
+      tf.config.experimental.set_memory_growth(gpu, True)
+  except RuntimeError as e:
+    print(e)
 import os
 num_threads = 64
 os.environ["OMP_NUM_THREADS"] = "64"
@@ -34,18 +40,29 @@ lustrepath=os.environ["LUSTRE"]
 data_dir = tf.keras.utils.get_file('flower_photos', dataset_url,cache_dir=lustrepath, untar=True)
 data_dir = pathlib.Path(data_dir)
 img_height,img_width=180,180
-batch_size=32
+batch_size=8
 
 
-print("In[3]:")
+# In[6]:
 print("data_dir: "+str(data_dir))
+
+
+physical_devices = tf.config.list_physical_devices('GPU') 
+print(physical_devices)
+#tf.config.set_visible_devices(physical_devices[0:1],'GPU') 
+strategy = tf.distribute.MultiWorkerMirroredStrategy()
+
+
+# In[7]:
+
+
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
   validation_split=0.2,
   subset="training",
   seed=123,
   image_size=(img_height, img_width),
-  batch_size=batch_size)
+  batch_size=batch_size) 
 
 val_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
@@ -53,42 +70,44 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
   subset="validation",
   seed=123,
   image_size=(img_height, img_width),
-  batch_size=batch_size)
+  batch_size=batch_size*2) 
 train_ds = train_ds.prefetch(tf.data.AUTOTUNE)
 val_ds = val_ds.prefetch(tf.data.AUTOTUNE)
 
-print("# In[4]:")
-
-print("In[5]:")
 
 
-resnet_model = Sequential()
 
-pretrained_model= tf.keras.applications.ResNet50(include_top=False,
+
+# In[9]:
+
+
+#BATCH_SIZE_PER_REPLICA = 32
+#GLOBAL_BATCH_SIZE = BATCH_SIZE_PER_REPLICA * strategy.num_replicas_in_sync
+#train_batches = train_ds.batch(GLOBAL_BATCH_SIZE)
+#val_batches = val_ds.batch(GLOBAL_BATCH_SIZE)
+
+with strategy.scope():   
+    resnet_model = Sequential()
+    pretrained_model= tf.keras.applications.ResNet50(include_top=False,
                    input_shape=(180,180,3),
                    pooling='avg',classes=5,
                    weights='imagenet')
-for layer in pretrained_model.layers:
+    for layer in pretrained_model.layers:
         layer.trainable=False
+    resnet_model.add(pretrained_model)
+    resnet_model.add(Flatten())
+    resnet_model.add(Dense(512, activation='relu'))
+    resnet_model.add(Dense(5, activation='softmax'))
+    resnet_model.summary()    
+    resnet_model.compile(optimizer=Adam(learning_rate=0.001),loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 
-resnet_model.add(pretrained_model)
-resnet_model.add(Flatten())
-resnet_model.add(Dense(512, activation='relu'))
-resnet_model.add(Dense(5, activation='softmax'))
-resnet_model.summary()
-
-
-print("In[6]:")
-
-
-resnet_model.compile(optimizer=Adam(learning_rate=0.001),loss='sparse_categorical_crossentropy',metrics=['accuracy'])
-
-tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = './logs',histogram_freq = 1,profile_batch = '6,7')
-
-history = resnet_model.fit(train_ds, validation_data=val_ds, epochs=10,callbacks = [tboard_callback])
+#history = resnet_model.fit(train_batches, validation_data=val_batches, epochs=10)
+tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = './logs',histogram_freq = 1,profile_batch = '200,220')
+history = resnet_model.fit(train_ds,validation_data=val_ds, epochs=10,callbacks = [tboard_callback])
 
 
-# In[7]:
+
+# In[10]:
 
 
 fig1 = plt.gcf()

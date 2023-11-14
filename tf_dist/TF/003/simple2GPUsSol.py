@@ -29,16 +29,22 @@ tf.config.threading.set_intra_op_parallelism_threads(
     num_threads
 )
 tf.config.set_soft_device_placement(True)
+
 dataset_url = "https://storage.googleapis.com/download.tensorflow.org/example_images/flower_photos.tgz"
 lustrepath=os.environ["LUSTRE"]
 data_dir = tf.keras.utils.get_file('flower_photos', dataset_url,cache_dir=lustrepath, untar=True)
 data_dir = pathlib.Path(data_dir)
 img_height,img_width=180,180
-batch_size=32
+batch_size=8
 
 
 print("In[3]:")
 print("data_dir: "+str(data_dir))
+strategy=tf.distribute.MirroredStrategy()
+
+
+
+
 train_ds = tf.keras.preprocessing.image_dataset_from_directory(
   data_dir,
   validation_split=0.2,
@@ -57,38 +63,42 @@ val_ds = tf.keras.preprocessing.image_dataset_from_directory(
 train_ds = train_ds.prefetch(tf.data.AUTOTUNE)
 val_ds = val_ds.prefetch(tf.data.AUTOTUNE)
 
-print("# In[4]:")
-
-print("In[5]:")
+# In[6]:
 
 
-resnet_model = Sequential()
+physical_devices = tf.config.list_physical_devices('GPU') 
+print(physical_devices)
+#strategy=tf.distribute.MirroredStrategy()
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+  try:
+    for gpu in gpus:
+      tf.config.experimental.set_memory_growth(gpu, True)
+  except RuntimeError as e:
+    print(e)
 
-pretrained_model= tf.keras.applications.ResNet50(include_top=False,
+with strategy.scope():
+    resnet_model = Sequential()
+    pretrained_model= tf.keras.applications.ResNet50(include_top=False,
                    input_shape=(180,180,3),
                    pooling='avg',classes=5,
                    weights='imagenet')
-for layer in pretrained_model.layers:
+    for layer in pretrained_model.layers:
         layer.trainable=False
 
-resnet_model.add(pretrained_model)
-resnet_model.add(Flatten())
-resnet_model.add(Dense(512, activation='relu'))
-resnet_model.add(Dense(5, activation='softmax'))
-resnet_model.summary()
+    resnet_model.add(pretrained_model)
+    resnet_model.add(Flatten())
+    resnet_model.add(Dense(512, activation='relu'))
+    resnet_model.add(Dense(5, activation='softmax'))
+    resnet_model.summary()    
+    resnet_model.compile(optimizer=Adam(learning_rate=0.001),loss='sparse_categorical_crossentropy',metrics=['accuracy'])
 
-
-print("In[6]:")
-
-
-resnet_model.compile(optimizer=Adam(learning_rate=0.001),loss='sparse_categorical_crossentropy',metrics=['accuracy'])
-
-tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = './logs',histogram_freq = 1,profile_batch = '6,7')
+tboard_callback = tf.keras.callbacks.TensorBoard(log_dir = './logs',histogram_freq = 1,profile_batch = '200,220')
 
 history = resnet_model.fit(train_ds, validation_data=val_ds, epochs=10,callbacks = [tboard_callback])
 
 
-# In[7]:
+# In[ ]:
 
 
 fig1 = plt.gcf()
@@ -101,6 +111,12 @@ plt.ylabel('Accuracy')
 plt.xlabel('Epochs')
 plt.legend(['train', 'validation'])
 plt.show()
+
+
+# In[ ]:
+
+
+
 
 
 # In[ ]:

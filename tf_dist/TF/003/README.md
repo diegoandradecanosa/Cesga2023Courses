@@ -31,5 +31,10 @@ Las diferencia apreciables se deben a que:
 - simple2GPUsSol está configurado para usar una estrategia espejo del tipo MirroredStrategy (no recomendada, incluso dentro de un único nodo)
 - simple2GPUSol2 está configurado para usar una estrategia espejo del tipo MultiworkerMirroredStrategy (la recomendada para proporcionar paralelismo de datos)
 
+También se pueden ejecutar las versiones .py de los mismos códigos usando ipython
+
+- ipython simple2GPUsOrig.py 
+- ipython simple2GPUsSol.py 
+- ipython simple2GPUsSol2.py 
 
 
