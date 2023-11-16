@@ -37,4 +37,8 @@ También se pueden ejecutar las versiones .py de los mismos códigos usando ipyt
 - ipython simple2GPUsSol.py 
 - ipython simple2GPUsSol2.py 
 
+Inspecciona el código relevante en las versiones preparadas para usar varias GPUs
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/3ca3f1bad4956636191ac37569f20391ab0886d2/tf_dist/TF/003/simple2GPUsSol.py#L20-L24
+
 
