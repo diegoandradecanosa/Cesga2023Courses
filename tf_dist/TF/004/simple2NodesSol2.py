@@ -37,7 +37,7 @@ def set_tf_config(resolver, environment=None):
 
 resolver = tf.distribute.cluster_resolver.SlurmClusterResolver()
 set_tf_config(resolver)
-print(resolver.as_dict())
+#print(resolver.as_dict())
 strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy(cluster_resolver=resolver)
 
 #cluster_spec=tf.distribute.cluster_resolver.SlurmClusterResolver().cluster_spec()
