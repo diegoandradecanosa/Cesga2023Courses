@@ -39,5 +39,7 @@ Volviendo a la función *run_worker*, el código que se ejecuta en cada trabajad
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/e2e12e163ea806e7868255b79b7e46d36aa15359/tf_dist/TF/005/PSsample.py#L83-L88
 
 
+# Parameter Server con Keras
 
+# Parameter Server con bucle propio
 
