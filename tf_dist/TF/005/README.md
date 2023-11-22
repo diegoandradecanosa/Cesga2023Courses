@@ -59,8 +59,29 @@ cd $STORE/Cesga2023Courses/tf_dist/TF/005
 sbatch sbatch_2nodes_ngpus.sh PSKeras.py
 ```
 
-Luego, examinamos las salidas
+Luego, examinamos las salidas.
 
+Examinemos las partes relevantes del código. La función *create_in_process_cluter* genera los servidores necesarios a través del API de TF.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/7f8ce2a1abb0575591003e07fdf76e1b85a5aeb4/tf_dist/TF/005/PSKeras.py#L8-L42
+
+
+Esta función se llama, en este caso, para crear 1 PS y 3 *workers*. Se crea el particionador de variables que distribuye los datos entre los PS, y luego se instancia
+la estrategia PS.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/7f8ce2a1abb0575591003e07fdf76e1b85a5aeb4/tf_dist/TF/005/PSKeras.py#L48-L58
+
+En esta parte del código se produce la carga del *dataset*
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/7f8ce2a1abb0575591003e07fdf76e1b85a5aeb4/tf_dist/TF/005/PSKeras.py#L64-L69
+
+A continuación, se construye y compila el modelo
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/7f8ce2a1abb0575591003e07fdf76e1b85a5aeb4/tf_dist/TF/005/PSKeras.py#L71-L73
+
+Finalmente, se llama a la función de entrenamiento con los callbacks correspondientes
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/7f8ce2a1abb0575591003e07fdf76e1b85a5aeb4/tf_dist/TF/005/PSKeras.py#L80-L86
 
 # Parameter Server con bucle propio
 
