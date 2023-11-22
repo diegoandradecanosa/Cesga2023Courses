@@ -138,7 +138,12 @@ a través de varios dispositivos:
 - Hay una réplica del modelo, pero podría haber varias que se repartirían los *batch* del conjunto de entrenamiento.
 - Los dispositivos que componen una misma copia del modelo reciben  datos de entrenamiento replicados.
 
+En las siguiente líneas vemos cambios significativos respecto al código anterior. Creamos una *mesh* con 2 dimensiones diferentes y 
+definimos que dimensiones de cada estructura están distribuidas y cuales no.
 
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/034de6f8e328cdebd9b6c5b2062993c1781b8c2a/tf_dist/TF/006DTENSORS/modelparallel.py#L142-L144
+
+El resto del código se puede mantener igual y seguiría funcionando para este caso.
 
 
 
