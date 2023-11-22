@@ -145,6 +145,10 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/034de6f8e328cdebd9b6
 
 El resto del código se puede mantener igual y seguiría funcionando para este caso.
 
+Puedes inspeccionar también las modificaciones para incrementar las fuentes de paralelismo usando [paralelismo espacial](https://www.tensorflow.org/tutorials/distribute/dtensor_ml_tutorial#spatial_parallel_training) (*spatial*)
+
+
+
 
 
 
