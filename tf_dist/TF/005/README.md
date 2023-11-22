@@ -1,6 +1,16 @@
 # Parameter Server Ejemplo Simple
 
-Este es un ejemplo simple de uso de la estrategia Parameter Server. Recordemos que esta estrategia se 
+Este es un ejemplo simple de uso de la estrategia Parameter Server. Para lanzar el código debemos seguir los pasos habituales:
+
+```bash
+ssh tusuario@ft3.cesga.es
+cd $STORE/Cesga2023Courses/tf_dist/TF/005
+sbatch sbatch_2nodes_ngpus.sh PSsample.py
+```
+
+Luego, examinamos las salidas
+
+Recordemos que esta estrategia se 
 basa en el uso de uno o varios nodos como servidores de parámetro (PS) y uno o varios nodos como trabajadores
 (*workers*). También es posible nombrar un nodo adicional para el rol de coordinador (*coordinator*). El ejemplo se basa en utilizar
 esta estrategia para hace una tarea muy sencilla, el incremento entre varios trabajadores de una variable *counter* siguiendo la estrategia Parameter Server.
@@ -41,5 +51,25 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/e2e12e163ea806e78682
 
 # Parameter Server con Keras
 
+En este caso vamos a utilizar una estrategia PS para el entrenamiento de un entrenamiento escrito en Keras. Para ejecutar el código seguiremos los pasos habituales.
+
+```bash
+ssh tusuario@ft3.cesga.es
+cd $STORE/Cesga2023Courses/tf_dist/TF/005
+sbatch sbatch_2nodes_ngpus.sh PSKeras.py
+```
+
+Luego, examinamos las salidas
+
+
 # Parameter Server con bucle propio
 
+En este caso vamos a utilizar una estrategia PS para el entrenamiento de un entrenamiento escrito con un bucle propio. Para ejecutar el código seguiremos los pasos habituales.
+
+```bash
+ssh tusuario@ft3.cesga.es
+cd $STORE/Cesga2023Courses/tf_dist/TF/005
+sbatch sbatch_2nodes_ngpus.sh PSCustom.py
+```
+
+Luego, examinamos las salidas
