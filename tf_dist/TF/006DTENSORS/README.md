@@ -88,9 +88,9 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/8974e0d39b4acd68cca6
 Inspeccionémosla más en detalle. La función *tf.data* carga los datos en la memoria principal del dispositivo *host*. Es necesario, mover estos datos explícitamente 
 a los dispositivos aceleradores. Dicho se envío se hace a través del uso de la función *dtensor.pack*.
 
-## Paralelismo a nivel del modelo
+## Paralelismo a nivel del datos
 
-El paralelismo a nivel de modelo se realiza del siguiente modo:
+El paralelismo a nivel de datos se realiza del siguiente modo:
 
 - Todas las variables del modelo se replican en los *N* dispositivos disponibles
 - Un batch (de entradas) global se distribuye en *N* batches (uno por réplica)
@@ -116,6 +116,32 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/8974e0d39b4acd68cca6
 El bucle de entrenamiento también no contiene ninguna indicación del uso de DTensors salvo la llamada a *repack_batch* al principio de cada paso
 
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/8974e0d39b4acd68cca64bddfb82b6bf70c4dfde/tf_dist/TF/006DTENSORS/dataparallel.py#L191-L204
+
+## Paralelismo a nivel de modelo
+
+El código para implementar paralelismo a nivel de modelo en el ejemplo anterior es muy similar al que hemos visto. Su ejecución requiere unos pasos similares al ejemplo anterior.
+
+```bash
+ssh tusuario@ft3.cesga.es
+source $STORE/Cesga2023Courses/pytorch_dist/scripts/interactive_1node_2gpus.sh
+source $STORE/mytf/bin/activate
+python modelparallel.py
+```
+
+La siguiente figure muestra la estrategia de distribución asociada a este caso.
+
+![Model Parallelism](figs/modpar.png)
+
+Como tenemos 2 dispositivos, vamos a tener una dimensión *batch* de tamaño 1 y vamos a crear una nueva dimensión *model* de tamaño 2. La idea del paralelismo de modelo se basa en distribuir cada réplica del modelo
+a través de varios dispositivos:
+
+- Hay una réplica del modelo, pero podría haber varias que se repartirían los *batch* del conjunto de entrenamiento.
+- Los dispositivos que componen una misma copia del modelo reciben  datos de entrenamiento replicados.
+
+
+
+
+
 
 
 
