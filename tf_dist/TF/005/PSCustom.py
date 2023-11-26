@@ -134,26 +134,6 @@ with strategy.scope():
   optimizer = tf.keras.optimizers.legacy.RMSprop(learning_rate=0.1)
   accuracy = tf.keras.metrics.Accuracy()
 
-# These variables created under the `Strategy.scope` will be placed on parameter
-# servers in a round-robin fashion.
-with strategy.scope():
-  # Create the model. The input needs to be compatible with Keras processing layers.
-  model_input = tf.keras.layers.Input(
-      shape=(3,), dtype=tf.int64, name="model_input")
-
-  emb_layer = tf.keras.layers.Embedding(
-      input_dim=len(feature_lookup_layer.get_vocabulary()), output_dim=16384)
-  emb_output = tf.reduce_mean(emb_layer(model_input), axis=1)
-  dense_output = tf.keras.layers.Dense(
-      units=1, activation="sigmoid",
-      kernel_regularizer=tf.keras.regularizers.L2(1e-4),
-  )(emb_output)
-  model = tf.keras.Model({"features": model_input}, dense_output)
-
-  optimizer = tf.keras.optimizers.legacy.RMSprop(learning_rate=0.1)
-  accuracy = tf.keras.metrics.Accuracy()
-  
-
 #assert len(emb_layer.weights) == 2
 #assert emb_layer.weights[0].shape == (4, 16384)
 #assert emb_layer.weights[1].shape == (4, 16384)
@@ -163,7 +143,6 @@ with strategy.scope():
 
 @tf.function
 def step_fn(iterator):
-
   def replica_fn(batch_data, labels):
     with tf.GradientTape() as tape:
       pred = model(batch_data, training=True)
