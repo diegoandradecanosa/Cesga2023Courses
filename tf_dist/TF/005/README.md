@@ -93,4 +93,30 @@ cd $STORE/Cesga2023Courses/tf_dist/TF/005
 sbatch sbatch_2nodes_ngpus.sh PSCustom.py
 ```
 
-Luego, examinamos las salidas
+Luego, examinamos las salidas.
+
+Respecto al código, este sigue conteniendo una definición de la función *create_in_process_cluster* similar al anterior ejemplo.
+La definición del *partitioner* y la configuración de la *ParameterServerStrategy* ocurre de forma similar al caso anterior.
+
+Las capas de preprocesamiento de los datos, se definen dentro de un entorno *with strategy.scope()*, así nos aseguramos que se crean en todos los trabajadores.
+A continuación, vemos un extracto de código con la definición de las primeras.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L69-L76
+
+La creación del *dataset* de entrenamiento se siguen produciendo en la función *dataset_fn*. La generación de algunos samples de ejemplo del *dataset* se produce en la función
+*feature_and_label_gen* cuya definición vemos a continuación.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L97-L104
+
+El modelo y otros objetos también se definen dentro de un entorno *with strategy.scope()* 
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L120-L135
+
+Dentro de un entorno similar se produce la distribución de estas variables del modelo entre los *PS* disponibles, con una estrategia de distribución
+de tipo *round robin*.
+
+
+
+
+
+
