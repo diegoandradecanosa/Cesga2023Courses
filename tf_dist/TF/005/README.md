@@ -101,19 +101,51 @@ La definición del *partitioner* y la configuración de la *ParameterServerStrat
 Las capas de preprocesamiento de los datos, se definen dentro de un entorno *with strategy.scope()*, así nos aseguramos que se crean en todos los trabajadores.
 A continuación, vemos un extracto de código con la definición de las primeras.
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L69-L76
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L69-L76
 
 La creación del *dataset* de entrenamiento se siguen produciendo en la función *dataset_fn*. La generación de algunos samples de ejemplo del *dataset* se produce en la función
 *feature_and_label_gen* cuya definición vemos a continuación.
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L97-L104
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L97-L104
 
 El modelo y otros objetos también se definen dentro de un entorno *with strategy.scope()* 
-
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/cbcb0655646346339cbea2e95c9015e058eee5f3/tf_dist/TF/005/PSCustom.py#L120-L135
-
-Dentro de un entorno similar se produce la distribución de estas variables del modelo entre los *PS* disponibles, con una estrategia de distribución
+La distribución de estas variables del modelo entre los *PS* disponibles, con una estrategia de distribución
 de tipo *round robin*.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L120-L135
+
+La definición del paso de entrenamiento se produce en forma de función decorada con *tf.function* y dentro de un entorno
+*with tf.GradientTape()*.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L144-L165
+
+
+Se creat un objeto del tipo *ClusterCoordinator* para pasar como argumento al objeto *strategy*
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L167
+
+El siguiente fragmento de código nos asegura que la carga del dataset se va a distribuir entre los trabajadores y va a utilizar el mecanismo de prebúsqueda.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L169-L174
+
+A continuación, vemos la parte del código en el que el *ClusterCoordinator* distribuye el trabajo entre los trabajadores remotos.
+- El método *schedule* encola una *tf.function* y devuelve como resultado un futuro *RemoteValue.
+- El método *join* espera a que todos esos trabajos finalicen y devuelvan un resultado.
+
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/1857078f424b92535a2d21ca54c818f220a91c40/tf_dist/TF/005/PSCustom.py#L176-L184
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
