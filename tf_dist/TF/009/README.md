@@ -45,7 +45,7 @@ Esta clase se utiliza para definir y entrenar el modelo de Red Neuronal de Memor
 
 build_model: En este método, se crea la arquitectura del modelo utilizando capas de Embedding, LSTM y otras capas de Keras para procesar las historias y las preguntas.
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L140-l219
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L140-L219
 
 setup: Configura el modelo y los datos de entrenamiento y prueba.
 
@@ -63,11 +63,11 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea45
 
 La función principal inicia una sesión de Ray y configura la sintonización de hiperparámetros utilizando el algoritmo de entrenamiento basado en población (PBT). Se define un conjunto de hiperparámetros que pueden ser sintonizados, como la tasa de abandono (dropout), la tasa de aprendizaje (lr), y otros.
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L275C1-L275C35
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L275-L282
 
 Se crea una instancia del tuner (MemNNModel) y se inicia el proceso de entrenamiento.
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L284C5-L284C10
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L284-L309
 
 # Resultados
 
