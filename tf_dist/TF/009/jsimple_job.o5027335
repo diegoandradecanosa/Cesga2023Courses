@@ -1,0 +1,181 @@
+2023-11-29 20:29:38.838800: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-29 20:29:38.838948: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-11-29 20:29:38.877908: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-11-29 20:29:38.877909: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2023-11-29 20:29:38.877950: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-11-29 20:29:38.877950: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2023-11-29 20:29:38.877990: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-11-29 20:29:38.877990: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2023-11-29 20:29:38.885917: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-29 20:29:38.885917: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-11-29 20:29:44,591	INFO worker.py:1673 -- Started a local Ray instance.
+2023-11-29 20:29:44,592	INFO worker.py:1673 -- Started a local Ray instance.
+2023-11-29 20:29:46,482	INFO tune.py:220 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `Tuner(...)`.
+2023-11-29 20:29:46,484	INFO tune.py:595 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/tune.py:747: UserWarning: Consider boosting PBT performance by enabling `reuse_actors` as well as implementing `reset_config` for Trainable.
+  warnings.warn(
+2023-11-29 20:29:46,512	WARNING tune.py:905 -- Tune detects GPUs, but no trials are using GPUs. To enable trials to use GPUs, wrap `train_func` with `tune.with_resources(train_func, resources_per_trial={'gpu': 1})` which allows Tune to expose 1 GPU to each trial. For Ray Train Trainers, you can specify GPU resources through `ScalingConfig(use_gpu=True)`. You can also override `Trainable.default_resource_request` if using the Trainable API.
+/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/schedulers/pbt.py:480: UserWarning: Using `CheckpointConfig.num_to_keep <= 2` with PBT can lead to restoration problems when checkpoint are deleted too early for other trials to exploit them. If this happens, increase the value of `num_to_keep`.
+  warnings.warn(
+2023-11-29 20:29:46,570	INFO tune.py:220 -- Initializing Ray automatically. For cluster usage or custom Ray initialization, call `ray.init(...)` before `Tuner(...)`.
+2023-11-29 20:29:46,571	INFO tune.py:595 -- [output] This will use the new output engine with verbosity 1. To disable the new output and use the legacy output engine, set the environment variable RAY_AIR_NEW_OUTPUT=0. For more information, please see https://github.com/ray-project/ray/issues/36949
+/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/tune.py:747: UserWarning: Consider boosting PBT performance by enabling `reuse_actors` as well as implementing `reset_config` for Trainable.
+  warnings.warn(
+2023-11-29 20:29:46,591	WARNING tune.py:905 -- Tune detects GPUs, but no trials are using GPUs. To enable trials to use GPUs, wrap `train_func` with `tune.with_resources(train_func, resources_per_trial={'gpu': 1})` which allows Tune to expose 1 GPU to each trial. For Ray Train Trainers, you can specify GPU resources through `ScalingConfig(use_gpu=True)`. You can also override `Trainable.default_resource_request` if using the Trainable API.
+/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/schedulers/pbt.py:480: UserWarning: Using `CheckpointConfig.num_to_keep <= 2` with PBT can lead to restoration problems when checkpoint are deleted too early for other trials to exploit them. If this happens, increase the value of `num_to_keep`.
+  warnings.warn(
+[36m(pid=463482)[0m 2023-11-29 20:29:48.599735: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=463448)[0m 2023-11-29 20:29:48.603543: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=463448)[0m 2023-11-29 20:29:48.643904: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=463448)[0m 2023-11-29 20:29:48.643947: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=463448)[0m 2023-11-29 20:29:48.643982: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=463448)[0m 2023-11-29 20:29:48.651538: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=463448)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(pid=463482)[0m 2023-11-29 20:29:48.640121: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=463482)[0m 2023-11-29 20:29:48.640154: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=463482)[0m 2023-11-29 20:29:48.640179: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=463482)[0m 2023-11-29 20:29:48.647166: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=463482)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088372: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088411: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088418: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088483: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088500: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=463483)[0m 2023-11-29 20:29:53.088506: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(MemNNModel pid=463483)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+[36m(pid=463483)[0m 2023-11-29 20:29:48.599734: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=463483)[0m 2023-11-29 20:29:48.639742: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=463483)[0m 2023-11-29 20:29:48.639781: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=463483)[0m 2023-11-29 20:29:48.639815: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=463483)[0m 2023-11-29 20:29:48.647166: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=463483)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244030: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244075: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244082: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244165: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244184: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=463448)[0m 2023-11-29 20:29:55.244189: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(pid=463447)[0m 2023-11-29 20:29:48.603543: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=463447)[0m 2023-11-29 20:29:48.643903: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=463447)[0m 2023-11-29 20:29:48.643945: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=463447)[0m 2023-11-29 20:29:48.643982: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=463447)[0m 2023-11-29 20:29:48.651538: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=463447)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(MemNNModel pid=463448)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+2023-11-29 20:29:59,365	INFO pbt.py:716 -- [pbt]: no checkpoint for trial MemNNModel_a7a06_00001. Skip exploit for Trial MemNNModel_a7a06_00000
+2023-11-29 20:30:01,572	INFO pbt.py:716 -- [pbt]: no checkpoint for trial MemNNModel_a7935_00001. Skip exploit for Trial MemNNModel_a7935_00000
+2023-11-29 20:30:04,131	INFO pbt.py:878 -- 
+
+[PopulationBasedTraining] [Exploit] Cloning trial a7a06_00001 (score = 0.533300) into trial a7a06_00000 (score = 0.532000)
+
+2023-11-29 20:30:04,132	INFO pbt.py:905 -- 
+
+[PopulationBasedTraining] [Explore] Perturbed the hyperparameter config of triala7a06_00000:
+dropout : 0.3 --- (* 0.8) --> 0.24
+lr : 0.01 --- (* 0.8) --> 0.008
+rho : 0.9 --- (* 1.2) --> 1.08
+
+[36m(MemNNModel pid=463483)[0m Checkpoint successfully created at: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7a06_00001_1_2023-11-29_20-29-46/checkpoint_000000)
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158744: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158785: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158792: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158872: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158889: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=463482)[0m 2023-11-29 20:29:54.158903: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(MemNNModel pid=463482)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+2023-11-29 20:30:05,741	INFO pbt.py:878 -- 
+
+[PopulationBasedTraining] [Exploit] Cloning trial a7935_00001 (score = 0.537300) into trial a7935_00000 (score = 0.531100)
+
+2023-11-29 20:30:05,741	INFO pbt.py:905 -- 
+
+[PopulationBasedTraining] [Explore] Perturbed the hyperparameter config of triala7935_00000:
+dropout : 0.3 --- (resample) --> 0.029275543409331695
+lr : 0.01 --- (* 0.8) --> 0.008
+rho : 0.9 --- (* 0.8) --> 0.7200000000000001
+
+[36m(MemNNModel pid=463448)[0m Checkpoint successfully created at: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7935_00001_1_2023-11-29_20-29-46/checkpoint_000000)
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335012: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335052: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335059: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335141: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335159: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=463447)[0m 2023-11-29 20:29:56.335165: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(MemNNModel pid=463447)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+[36m(pid=465714)[0m 2023-11-29 20:30:05.975775: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=465714)[0m 2023-11-29 20:30:06.017239: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=465714)[0m 2023-11-29 20:30:06.017277: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=465714)[0m 2023-11-29 20:30:06.017305: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=465714)[0m 2023-11-29 20:30:06.024353: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=465714)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(MemNNModel pid=463483)[0m Checkpoint successfully created at: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7a06_00001_1_2023-11-29_20-29-46/checkpoint_000001)
+[36m(pid=465809)[0m 2023-11-29 20:30:07.498180: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=465809)[0m 2023-11-29 20:30:07.538513: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=465809)[0m 2023-11-29 20:30:07.538554: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=465809)[0m 2023-11-29 20:30:07.538584: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=465809)[0m 2023-11-29 20:30:07.545716: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=465809)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+[36m(MemNNModel pid=463448)[0m Checkpoint successfully created at: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7935_00001_1_2023-11-29_20-29-46/checkpoint_000001)
+2023-11-29 20:30:09,166	WARNING tune_controller.py:746 -- Trial controller checkpointing failed: [Errno 2] No such file or directory: '/home/ulc/es/rlc/ray_results/pbt_babi_memnn/.tmp_generator' -> '/home/ulc/es/rlc/ray_results/pbt_babi_memnn/basic-variant-state-2023-11-29_20-29-46.json'
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438126: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438168: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438175: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438256: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438275: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=465714)[0m 2023-11-29 20:30:09.438281: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(MemNNModel pid=465714)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617210: E tensorflow/compiler/xla/stream_executor/cuda/cuda_driver.cc:268] failed call to cuInit: CUDA_ERROR_NO_DEVICE: no CUDA-capable device is detected
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617260: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:168] retrieving CUDA diagnostic information for host: c209-3
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617267: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:175] hostname: c209-3
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617344: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:199] libcuda reported version is: 535.54.3
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617362: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:203] kernel reported version is: 535.54.3
+[36m(MemNNModel pid=465809)[0m 2023-11-29 20:30:10.617367: I tensorflow/compiler/xla/stream_executor/cuda/cuda_diagnostics.cc:309] kernel version seems to match DSO: 535.54.3
+[36m(MemNNModel pid=465809)[0m WARNING:absl:`lr` is deprecated in Keras optimizer, please use `learning_rate` or use the legacy optimizer, e.g.,tf.keras.optimizers.legacy.RMSprop.
+Traceback (most recent call last):
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/Git/Cesga2023Courses/tf_dist/TF/009/pbt.py", line 310, in <module>
+    tuner.fit()
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/tuner.py", line 364, in fit
+    return self._local_tuner.fit()
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/impl/tuner_internal.py", line 526, in fit
+    analysis = self._fit_internal(trainable, param_space)
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/impl/tuner_internal.py", line 645, in _fit_internal
+    analysis = run(
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/tune.py", line 1007, in run
+    runner.step()
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/execution/tune_controller.py", line 747, in step
+    raise e
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/execution/tune_controller.py", line 744, in step
+    self.checkpoint()
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/execution/tune_controller.py", line 481, in checkpoint
+    self._checkpoint_manager.checkpoint(
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/execution/experiment_state.py", line 228, in checkpoint
+    save_fn()
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/execution/tune_controller.py", line 384, in save_to_dir
+    self._search_alg.save_to_dir(experiment_dir, session_str=self._session_str)
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/search/basic_variant.py", line 404, in save_to_dir
+    _atomic_save(
+  File "/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/lib/python3.9/site-packages/ray/tune/utils/util.py", line 416, in _atomic_save
+    os.replace(tmp_search_ckpt_path, os.path.join(checkpoint_dir, file_name))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ulc/es/rlc/ray_results/pbt_babi_memnn/.tmp_generator' -> '/home/ulc/es/rlc/ray_results/pbt_babi_memnn/basic-variant-state-2023-11-29_20-29-46.json'
+[36m(MemNNModel pid=465714)[0m Restored on 10.120.209.3 from checkpoint: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7a06_00001_1_2023-11-29_20-29-46/checkpoint_000000)
+[36m(MemNNModel pid=463483)[0m Checkpoint successfully created at: Checkpoint(filesystem=local, path=/home/ulc/es/rlc/ray_results/pbt_babi_memnn/MemNNModel_a7a06_00001_1_2023-11-29_20-29-46/checkpoint_000002)
+srun: error: a100-35: task 1: Exited with exit code 1
+srun: launch/slurm: _step_signal: Terminating StepId=5027335.0
+slurmstepd: error: *** STEP 5027335.0 ON a100-35 CANCELLED AT 2023-11-29T20:30:13 ***
+*** SIGTERM received at time=1701286213 on cpu 3 ***
+PC: @     0x148fc3866ef7  (unknown)  rename
+    @     0x148fc3b31130  1802527568  (unknown)
+    @     0x148fc3e792c4  (unknown)  (unknown)
+[2023-11-29 20:30:13,365 E 458376 458376] logging.cc:361: *** SIGTERM received at time=1701286213 on cpu 3 ***
+[2023-11-29 20:30:13,365 E 458376 458376] logging.cc:361: PC: @     0x148fc3866ef7  (unknown)  rename
+[2023-11-29 20:30:13,367 E 458376 458376] logging.cc:361:     @     0x148fc3b31130  1802527568  (unknown)
+[2023-11-29 20:30:13,368 E 458376 458376] logging.cc:361:     @     0x148fc3e792c4  (unknown)  (unknown)
+[36m(pid=466312)[0m 2023-11-29 20:30:13.600429: I tensorflow/core/util/port.cc:111] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+[36m(pid=466312)[0m 2023-11-29 20:30:13.641468: E tensorflow/compiler/xla/stream_executor/cuda/cuda_dnn.cc:9342] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+[36m(pid=466312)[0m 2023-11-29 20:30:13.641522: E tensorflow/compiler/xla/stream_executor/cuda/cuda_fft.cc:609] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+[36m(pid=466312)[0m 2023-11-29 20:30:13.641550: E tensorflow/compiler/xla/stream_executor/cuda/cuda_blas.cc:1518] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+[36m(pid=466312)[0m 2023-11-29 20:30:13.648770: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+[36m(pid=466312)[0m To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+srun: error: a100-35: task 0: Exited with exit code 15

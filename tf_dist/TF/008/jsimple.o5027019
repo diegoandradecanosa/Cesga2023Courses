@@ -1,0 +1,543 @@
+slurmstepd: info: Setting TMPDIR to /scratch/5027019. Previous errors about TMPDIR can be discarded
+/mnt/netapp2/Store_uni/home/ulc/es/rlc/mytf/bin/python
+SLURM_NTASKS: 2
+SLURM_CPUS_PER_TASK: 32
+SLURM_NNODES: 1
+SLURM_NTASKS_PER_NODE: 2
+╭──────────────────────────────────────────────────────────╮
+│ Configuration for experiment     exp                     │
+├──────────────────────────────────────────────────────────┤
+│ Search algorithm                 BasicVariantGenerator   │
+│ Scheduler                        AsyncHyperBandScheduler │
+│ Number of trials                 10                      │
+╰──────────────────────────────────────────────────────────╯
+
+View detailed results here: /home/ulc/es/rlc/ray_results/exp
+To visualize your results with TensorBoard, run: `tensorboard --logdir /home/ulc/es/rlc/ray_results/exp`
+
+Trial status: 10 PENDING
+Current time: 2023-11-29 20:16:12. Total running time: 0s
+Logical resource usage: 0/64 CPUs, 0/2 GPUs (0.0/1.0 accelerator_type:A100)
+╭────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status            lr     momentum     hidden │
+├────────────────────────────────────────────────────────────────────────┤
+│ train_mnist_c2201_00000   PENDING    0.0595937     0.31478         367 │
+│ train_mnist_c2201_00001   PENDING    0.0108335     0.738369         38 │
+│ train_mnist_c2201_00002   PENDING    0.0468231     0.762404        482 │
+│ train_mnist_c2201_00003   PENDING    0.0370992     0.168346        390 │
+│ train_mnist_c2201_00004   PENDING    0.0589038     0.173607        310 │
+│ train_mnist_c2201_00005   PENDING    0.0532472     0.852071        153 │
+│ train_mnist_c2201_00006   PENDING    0.0870633     0.227176        385 │
+│ train_mnist_c2201_00007   PENDING    0.0694261     0.191818        428 │
+│ train_mnist_c2201_00008   PENDING    0.0426968     0.400843        408 │
+│ train_mnist_c2201_00009   PENDING    0.0765985     0.485589        339 │
+╰────────────────────────────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00007 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00007 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       428 │
+│ lr                                       0.06943 │
+│ momentum                                 0.19182 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00008 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00008 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       408 │
+│ lr                                        0.0427 │
+│ momentum                                 0.40084 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00009 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00009 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       339 │
+│ lr                                        0.0766 │
+│ momentum                                 0.48559 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00002 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00002 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       482 │
+│ lr                                       0.04682 │
+│ momentum                                  0.7624 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00005 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00005 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       153 │
+│ lr                                       0.05325 │
+│ momentum                                 0.85207 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00000 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00000 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       367 │
+│ lr                                       0.05959 │
+│ momentum                                 0.31478 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00001 started with configuration:
+╭──────────────────────────────────────────────────────────╮
+│ Configuration for experiment     exp                     │
+├──────────────────────────────────────────────────────────┤
+│ Search algorithm                 BasicVariantGenerator   │
+│ Scheduler                        AsyncHyperBandScheduler │
+│ Number of trials                 10                      │
+╰──────────────────────────────────────────────────────────╯
+
+View detailed results here: /home/ulc/es/rlc/ray_results/exp
+To visualize your results with TensorBoard, run: `tensorboard --logdir /home/ulc/es/rlc/ray_results/exp`
+
+Trial status: 10 PENDING
+Current time: 2023-11-29 20:16:12. Total running time: 0s
+Logical resource usage: 0/64 CPUs, 0/2 GPUs (0.0/1.0 accelerator_type:A100)
+╭─────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status             lr     momentum     hidden │
+├─────────────────────────────────────────────────────────────────────────┤
+│ train_mnist_c20fa_00000   PENDING    0.0810006      0.368421        296 │
+│ train_mnist_c20fa_00001   PENDING    0.0303935      0.465701        279 │
+│ train_mnist_c20fa_00002   PENDING    0.0746256      0.300579        455 │
+│ train_mnist_c20fa_00003   PENDING    0.00205027     0.272017        108 │
+│ train_mnist_c20fa_00004   PENDING    0.0140367      0.709802        206 │
+│ train_mnist_c20fa_00005   PENDING    0.049262       0.846659        343 │
+│ train_mnist_c20fa_00006   PENDING    0.0464509      0.781594        506 │
+│ train_mnist_c20fa_00007   PENDING    0.053807       0.34909         180 │
+│ train_mnist_c20fa_00008   PENDING    0.0368299      0.726328        315 │
+│ train_mnist_c20fa_00009   PENDING    0.0958993      0.568577        242 │
+╰─────────────────────────────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00007 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00007 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       180 │
+│ lr                                       0.05381 │
+│ momentum                                 0.34909 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00001 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00001 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       279 │
+│ lr                                       0.03039 │
+│ momentum                                  0.4657 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00009 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00009 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       242 │
+│ lr                                        0.0959 │
+│ momentum                                 0.56858 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00002 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00002 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       455 │
+│ lr                                       0.07463 │
+│ momentum                                 0.30058 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00004 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00004 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       206 │
+│ lr                                       0.01404 │
+│ momentum                                  0.7098 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00005 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00005 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       343 │
+│ lr                                       0.04926 │
+│ momentum                                 0.84666 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00000 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00001 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                        38 │
+│ lr                                       0.01083 │
+│ momentum                                 0.73837 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00004 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00004 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       310 │
+│ lr                                        0.0589 │
+│ momentum                                 0.17361 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00006 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00006 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       385 │
+│ lr                                       0.08706 │
+│ momentum                                 0.22718 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00003 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00003 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       390 │
+│ lr                                        0.0371 │
+│ momentum                                 0.16835 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00001 completed after 12 iterations at 2023-11-29 20:16:32. Total running time: 20s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00001 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.01522 │
+│ time_total_s                             14.5323 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.92272 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00000 completed after 12 iterations at 2023-11-29 20:16:37. Total running time: 25s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00000 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.52869 │
+│ time_total_s                             19.8534 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.93262 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00005 completed after 12 iterations at 2023-11-29 20:16:38. Total running time: 26s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00005 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.54069 │
+│ time_total_s                             21.1394 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.96465 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00008 completed after 12 iterations at 2023-11-29 20:16:38. Total running time: 26s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00008 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.58671 │
+│ time_total_s                             21.2318 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.93642 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00004 completed after 12 iterations at 2023-11-29 20:16:38. Total running time: 26s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00004 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.33662 │
+│ time_total_s                             21.2197 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.92585 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00009 completed after 12 iterations at 2023-11-29 20:16:39. Total running time: 27s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00009 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.37269 │
+│ time_total_s                             21.8052 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.94063 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00002 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00002 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.16429 │
+│ time_total_s                             23.3792 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.96168 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00006 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00006 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.11529 │
+│ time_total_s                             23.4697 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.92822 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00007 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00007 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.05515 │
+│ time_total_s                             23.8543 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.92977 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c2201_00003 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c2201_00003 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.98541 │
+│ time_total_s                             23.8546 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.92745 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 10 TERMINATED
+Current time: 2023-11-29 20:16:41. Total running time: 29s
+Logical resource usage: 2.0/64 CPUs, 0/2 GPUs (0.0/1.0 accelerator_type:A100)
+Current best trial: c2201_00005 with mean_accuracy=0.9646499752998352 and params={'threads': 2, 'lr': 0.05324715540455781, 'momentum': 0.8520705756047509, 'hidden': 153}
+╭─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status              lr     momentum     hidden        acc     iter     total time (s) │
+├─────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ train_mnist_c2201_00000   TERMINATED   0.0595937     0.31478         367   0.932617       12            19.8534 │
+│ train_mnist_c2201_00001   TERMINATED   0.0108335     0.738369         38   0.922717       12            14.5323 │
+│ train_mnist_c2201_00002   TERMINATED   0.0468231     0.762404        482   0.961683       12            23.3792 │
+│ train_mnist_c2201_00003   TERMINATED   0.0370992     0.168346        390   0.92745        12            23.8546 │
+│ train_mnist_c2201_00004   TERMINATED   0.0589038     0.173607        310   0.92585        12            21.2197 │
+│ train_mnist_c2201_00005   TERMINATED   0.0532472     0.852071        153   0.96465        12            21.1394 │
+│ train_mnist_c2201_00006   TERMINATED   0.0870633     0.227176        385   0.928217       12            23.4697 │
+│ train_mnist_c2201_00007   TERMINATED   0.0694261     0.191818        428   0.929767       12            23.8543 │
+│ train_mnist_c2201_00008   TERMINATED   0.0426968     0.400843        408   0.936417       12            21.2317 │
+│ train_mnist_c2201_00009   TERMINATED   0.0765985     0.485589        339   0.940633       12            21.8052 │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Best hyperparameters found were:  {'threads': 2, 'lr': 0.05324715540455781, 'momentum': 0.8520705756047509, 'hidden': 153}
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00000 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       296 │
+│ lr                                         0.081 │
+│ momentum                                 0.36842 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00003 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00003 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       108 │
+│ lr                                       0.00205 │
+│ momentum                                 0.27202 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00008 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00008 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       315 │
+│ lr                                       0.03683 │
+│ momentum                                 0.72633 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00006 started with configuration:
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00006 config             │
+├──────────────────────────────────────────────────┤
+│ hidden                                       506 │
+│ lr                                       0.04645 │
+│ momentum                                 0.78159 │
+│ threads                                        2 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00001 completed after 12 iterations at 2023-11-29 20:16:35. Total running time: 23s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00001 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.46177 │
+│ time_total_s                             18.1851 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.93742 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00003 completed after 12 iterations at 2023-11-29 20:16:38. Total running time: 26s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00003 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.15777 │
+│ time_total_s                             20.9399 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.91917 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00000 completed after 12 iterations at 2023-11-29 20:16:39. Total running time: 27s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00000 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.30769 │
+│ time_total_s                             22.2081 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.93503 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00002 completed after 12 iterations at 2023-11-29 20:16:40. Total running time: 28s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00002 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.41356 │
+│ time_total_s                             22.9078 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.93232 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00008 completed after 12 iterations at 2023-11-29 20:16:40. Total running time: 28s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00008 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.24093 │
+│ time_total_s                             22.8379 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.95672 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00004 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00004 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.40827 │
+│ time_total_s                             23.9806 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.95295 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00005 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00005 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.02655 │
+│ time_total_s                             24.0694 │
+│ training_iteration                            12 │
+│ mean_accuracy                            0.97047 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00007 completed after 12 iterations at 2023-11-29 20:16:41. Total running time: 29s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00007 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.28039 │
+│ time_total_s                              24.254 │
+│ training_iteration                            12 │
+│ mean_accuracy                             0.9287 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 8 TERMINATED | 2 RUNNING
+Current time: 2023-11-29 20:16:42. Total running time: 30s
+Logical resource usage: 4.0/64 CPUs, 0/2 GPUs (0.0/1.0 accelerator_type:A100)
+Current best trial: c20fa_00005 with mean_accuracy=0.970466673374176 and params={'threads': 2, 'lr': 0.049261951251052816, 'momentum': 0.8466586083127698, 'hidden': 343}
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status               lr     momentum     hidden        acc     iter     total time (s) │
+├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ train_mnist_c20fa_00006   RUNNING      0.0464509      0.781594        506   0.96165        11            23.8105 │
+│ train_mnist_c20fa_00009   RUNNING      0.0958993      0.568577        242   0.94005        11            23.2444 │
+│ train_mnist_c20fa_00000   TERMINATED   0.0810006      0.368421        296   0.935033       12            22.2082 │
+│ train_mnist_c20fa_00001   TERMINATED   0.0303935      0.465701        279   0.937417       12            18.1851 │
+│ train_mnist_c20fa_00002   TERMINATED   0.0746256      0.300579        455   0.932317       12            22.9078 │
+│ train_mnist_c20fa_00003   TERMINATED   0.00205027     0.272017        108   0.919167       12            20.94   │
+│ train_mnist_c20fa_00004   TERMINATED   0.0140367      0.709802        206   0.95295        12            23.9806 │
+│ train_mnist_c20fa_00005   TERMINATED   0.049262       0.846659        343   0.970467       12            24.0694 │
+│ train_mnist_c20fa_00007   TERMINATED   0.053807       0.34909         180   0.9287         12            24.254  │
+│ train_mnist_c20fa_00008   TERMINATED   0.0368299      0.726328        315   0.956717       12            22.8379 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00009 completed after 12 iterations at 2023-11-29 20:16:42. Total running time: 30s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00009 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         1.40311 │
+│ time_total_s                             24.6475 │
+│ training_iteration                            12 │
+│ mean_accuracy                             0.9419 │
+╰──────────────────────────────────────────────────╯
+
+Trial train_mnist_c20fa_00006 completed after 12 iterations at 2023-11-29 20:16:42. Total running time: 30s
+╭──────────────────────────────────────────────────╮
+│ Trial train_mnist_c20fa_00006 result             │
+├──────────────────────────────────────────────────┤
+│ checkpoint_dir_name                              │
+│ time_this_iter_s                         0.97708 │
+│ time_total_s                             24.7876 │
+│ training_iteration                            12 │
+│ mean_accuracy                             0.9639 │
+╰──────────────────────────────────────────────────╯
+
+Trial status: 10 TERMINATED
+Current time: 2023-11-29 20:16:42. Total running time: 30s
+Logical resource usage: 2.0/64 CPUs, 0/2 GPUs (0.0/1.0 accelerator_type:A100)
+Current best trial: c20fa_00005 with mean_accuracy=0.970466673374176 and params={'threads': 2, 'lr': 0.049261951251052816, 'momentum': 0.8466586083127698, 'hidden': 343}
+╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│ Trial name                status               lr     momentum     hidden        acc     iter     total time (s) │
+├──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ train_mnist_c20fa_00000   TERMINATED   0.0810006      0.368421        296   0.935033       12            22.2082 │
+│ train_mnist_c20fa_00001   TERMINATED   0.0303935      0.465701        279   0.937417       12            18.1851 │
+│ train_mnist_c20fa_00002   TERMINATED   0.0746256      0.300579        455   0.932317       12            22.9078 │
+│ train_mnist_c20fa_00003   TERMINATED   0.00205027     0.272017        108   0.919167       12            20.94   │
+│ train_mnist_c20fa_00004   TERMINATED   0.0140367      0.709802        206   0.95295        12            23.9806 │
+│ train_mnist_c20fa_00005   TERMINATED   0.049262       0.846659        343   0.970467       12            24.0694 │
+│ train_mnist_c20fa_00006   TERMINATED   0.0464509      0.781594        506   0.9639         12            24.7876 │
+│ train_mnist_c20fa_00007   TERMINATED   0.053807       0.34909         180   0.9287         12            24.254  │
+│ train_mnist_c20fa_00008   TERMINATED   0.0368299      0.726328        315   0.956717       12            22.8379 │
+│ train_mnist_c20fa_00009   TERMINATED   0.0958993      0.568577        242   0.9419         12            24.6475 │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+Best hyperparameters found were:  {'threads': 2, 'lr': 0.049261951251052816, 'momentum': 0.8466586083127698, 'hidden': 343}
