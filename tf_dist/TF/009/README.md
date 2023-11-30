@@ -15,31 +15,31 @@ Antes de ejecutar este código, asegúrate de tener instalados los siguientes pa
 Cómo funciona el código:
 
 El código se divide en varias secciones principales:
-1. Importación de bibliotecas y módulos (líneas 11-32):
+1. Importación de bibliotecas y módulos:
 
     Se importan las bibliotecas y módulos necesarios, como TensorFlow, Keras, NumPy, Ray, y otros.
     Se utiliza from __future__ import print_function para habilitar la impresión compatible con Python 3.
 
-2. Funciones de procesamiento de texto (líneas 34-76):
+2. Funciones de procesamiento de texto:
 
     tokenize(sent): Esta función divide una oración en tokens, incluyendo la puntuación.
     parse_stories(lines, only_supporting=False): Procesa las historias en el formato bAbI y las convierte en una estructura de datos. Si only_supporting está configurado en True, solo se conservan las oraciones que respaldan la respuesta.
 
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L27-L65
 
-3. Funciones para vectorizar historias (líneas 78-89):
+3. Funciones para vectorizar historias:
 
     vectorize_stories(word_idx, story_maxlen, query_maxlen, data): Convierte las historias procesadas en vectores numéricos utilizando un índice de palabras (word_idx). También realiza el relleno de secuencias para que todas tengan la misma longitud.
 
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L89-L99
 
-4. Función para leer los datos (líneas 91-119):
+4. Función para leer los datos:
 
     read_data(finish_fast=False): Descarga y lee el conjunto de datos bAbI. Puedes establecer finish_fast en True para cargar solo un subconjunto de datos más pequeño.
 
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L102-L137
 
-5. Clase MemNNModel (líneas 121-227):
+5. Clase MemNNModel:
 
 Esta clase se utiliza para definir y entrenar el modelo de Red Neuronal de Memoria.
 
@@ -59,7 +59,7 @@ save_checkpoint y load_checkpoint se utilizan para guardar y cargar el modelo du
 
 https://github.com/diegoandradecanosa/Cesga2023Courses/blob/a13c2fe11942cc63ea4578d2bf1fbdd03e175cbb/tf_dist/TF/009/pbt.py#L250-L258
 
-6. Función main (líneas 229-262):
+6. Función main:
 
 La función principal inicia una sesión de Ray y configura la sintonización de hiperparámetros utilizando el algoritmo de entrenamiento basado en población (PBT). Se define un conjunto de hiperparámetros que pueden ser sintonizados, como la tasa de abandono (dropout), la tasa de aprendizaje (lr), y otros.
 
