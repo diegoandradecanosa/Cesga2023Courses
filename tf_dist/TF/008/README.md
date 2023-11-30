@@ -14,7 +14,7 @@ https://github.com/diegoandradecanosa/Cesga2023Courses/blob/f50dd927aa2ca9a33994
 
 Todos estos elementos se integran en la creación de un objeto de la clase Tuner
 
-https://github.com/diegoandradecanosa/Cesga2023Courses/blob/f50dd927aa2ca9a33994de7606712153bc32ab73/tf_dist/TF/008/tf_tune.py#L59C18-L59C23-L77
+https://github.com/diegoandradecanosa/Cesga2023Courses/blob/69134a448fee0003091cdebe0e4f3bd9db720590/tf_dist/TF/008/tf_tune.py#L59-L77
 
 Que recibe:
 
