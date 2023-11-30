@@ -28,4 +28,4 @@ El proceso se desencadena usando la función fit, y el mejor resultado se obtien
 
 Una vez ejecutado el proceso, los resultados se generar en un fichero con un nombre que sigue el formato. Además, se generan una serie de resultados auxiliares que se guardan en la carpeta $HOME/ray_results. Se proporcionan dos ejemplos de salida:
 
-    Ver: [ray_dist_3439027.out](https://github.com/diegoandradecanosa/Cesga2023Courses/blob/main/tf_dist/TF/008/jsimple.o5027019)
+Ver: [ray_dist_3439027.out](https://github.com/diegoandradecanosa/Cesga2023Courses/blob/main/tf_dist/TF/008/jsimple.o5027019)
